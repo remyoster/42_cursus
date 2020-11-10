@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mendeleiv table</title>
+		<style>
+body
+{
+width:100%
+}
+table 
+{
+	border-spacing:5px;
+	width:90%;
+}
+tr
+{
+	height:50px;
+}
+td
+{
+	border:2px solid black;
+	width:50px;
+	height:50px;
+}
+td p
+{
+	margin:0px;
+	padding:0px;
+}
+#bg
+{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+.e_mass
+{
+	text-align:right;
+	font-size:0.5em
+}
+.symbol
+{
+	text-align:center;
+	padding:5px;
+	font-size:2em
+}
+.e_nb
+{
+	text-align:left;
+	font-size:1em
+}
+.space
+{
+	border:none;
+}
+.legends
+{
+	border:none;
+	text-align:center;
+	background-color:#ffe5e5;
+	font-size:1em;
+}
+.others_nonmetal
+{
+	background-color:#66ff33;
+}
+.alkali
+{
+	background-color:#ff471a;
+}
+.alkaline_earth_metal
+{
+	background-color:#ffbf80;
+}
+.metalloid
+{
+	background-color:#bbbb77;
+}
+.halogen
+{
+	background-color:#ffff4d;
+}
+.noble_gas
+{
+	background-color:#99ccff;
+}
+.poor_metal
+{
+	background-color:#cccccc;
+}
+.transition_metal
+{
+	background-color:#f7a1a1;
+}
+.lanthanide
+{
+	background-color:#d372f3;
+}
+.actinide
+{
+	background-color:#f372b3;
+}
+.unclassified
+{
+	background-color:#f2f2f2;
+}
+.desintegration
+{
+	border:2px dashed black;
+}
+.synthetic
+{
+	border:2px dotted black;
+}
+.gas
+{
+	color:#ff0000;
+}
+.liquid
+{
+	color:blue;
+}
+
+
+		</style>
+	</head>
+
+	<body>
+		<table>
+			<caption style="font-size:2em;">Mendeleiv's table</caption>
+			<tr><!--1er line -->
+				<td class="others_nonmetal">
+					<p class="e_mass">1,007975</p>
+					<p class="symbol gas">H</p>
+					<p class="e_nb">1</p>
+				</td>
+				<td class="space" colspan="17"></td>
+				<td class="noble_gas">
+					<p class="e_mass">4,002602</p>
+					<p class="symbol gas">He</p>
+					<p class="e_nb">2</p>
+				</td>
+			</tr>
+			<tr><!--2e line -->
+				<td class="alkali">
+					<p class="e_mass">6,9395</p>
+					<p class="symbol">Li</p>
+					<p class="e_nb">3</p>
+				</td>
+				<td class="alkaline_earth_metal">
+					<p class="e_mass">9,0121831</p>
+					<p class="symbol">Be</p>
+					<p class="e_nb">4</p>
+				</td>
+				<td class="space" colspan="11"></td>
+				<td class="metalloid">
+					<p class="e_mass">10,8135</p>
+					<p class="symbol">B</p>
+					<p class="e_nb">5</p>
+				</td>
+				<td class="others_nonmetal">
+					<p class="e_mass">12,0106</p>
+					<p class="symbol">C</p>
+					<p class="e_nb">6</p>
+				</td>
+				<td class="others_nonmetal">
+					<p class="e_mass">14,006855</p>
+					<p class="symbol gas">N</p>
+					<p class="e_nb">7</p>
+				</td>
+				<td class="others_nonmetal">
+					<p class="e_mass">15,9994</p>
+					<p class="symbol gas">O</p>
+					<p class="e_nb">8</p>
+				</td>
+				<td class="halogen">
+					<p class="e_mass">18,99840316</p>
+					<p class="symbol gas">F</p>
+					<p class="e_nb">9</p>
+				</td>
+				<td class="noble_gas">
+					<p class="e_mass">20,1797</p>
+					<p class="symbol gas">Ne</p>
+					<p class="e_nb">10</p>
+				</td>
+			</tr>
+			<tr><!--3e line -->
+				<td class="alkali">
+					<p class="e_mass">22,98976928</p>
+					<p class="symbol">Na</p>
+					<p class="e_nb">11</p>
+				</td>
+				<td class="alkaline_earth_metal">
+					<p class="e_mass">24,3055</p>
+					<p class="symbol">Mg</p>
+					<p class="e_nb">12</p>
+				</td>
+				<td class="space" colspan="11"></td>
+				<td class="poor_metal">
+					<p class="e_mass">26,9815385</p>
+					<p class="symbol">Al</p>
+					<p class="e_nb">13</p>
+				</td>
+				<td class="metalloid">
+					<p class="e_mass">28,085</p>
+					<p class="symbol">Si</p>
+					<p class="e_nb">14</p>
+				</td>
+				<td class="others_nonmetal">
+					<p class="e_mass">30,973762</p>
+					<p class="symbol">P</p>
+					<p class="e_nb">15</p>
+				</td>
+				<td class="others_nonmetal">
+					<p class="e_mass">32,0675</p>
+					<p class="symbol">S</p>
+					<p class="e_nb">16</p>
+				</td>
+				<td class="halogen">
+					<p class="e_mass">35,4515</p>
+					<p class="symbol gas">Cl</p>
+					<p class="e_nb">17</p>
+				</td>
+				<td class="noble_gas">
+					<p class="e_mass">39,948</p>
+					<p class="symbol gas">Ar</p>
+					<p class="e_nb">18</p>
+				</td>
+			</tr>
+			<tr><!--4e line -->
+				<td class="alkali">
+					<p class="e_mass">39,0983</p>
+					<p class="symbol">K</p>
+					<p class="e_nb">19</p>
+				</td>
+				<td class="alkaline_earth_metal">
+					<p class="e_mass">40,078</p>
+					<p class="symbol">Ca</p>
+					<p class="e_nb">20</p>
+				</td>
+				<td class="space"i></td>
+				<td class="transition_metal">
+					<p class="e_mass">44,955908</p>
+					<p class="symbol">Sc</p>
+					<p class="e_nb">21</p>
+				</td>
+				<td class="transition_metal">
+					<p class="e_mass">47,867</p>
+					<p class="symbol">Ti</p>
+					<p class="e_nb">22</p>
+				</td>
+				<td class="transition_metal">
+					<p class="e_mass">50,9415</p>
+					<p class="symbol">V</p>
+					<p class="e_nb">23</p>
+				</td>
+				<td class="transition_metal">
+					<p class="e_mass">51,9961</p>
+					<p class="symbol">Cr</p>
+					<p class="e_nb">24</p>
+				</td>
+				<td class="transition_metal">
+					<p class="e_mass">54,938044</p>
+					<p class="symbol">Mn</p>
+					<p class="e_nb">25</p>
+				</td>
+				<td class="transition_metal">
+					<p class="e_mass">55,845</p>
+					<p class="symbol">Fe</p>
+					<p class="e_nb">26</p>
+				</td>
+				<td class="transition_metal">
+					<p class="e_mass">58,933194</p>
+					<p class="symbol">Co</p>
+					<p class="e_nb">27</p>
+				</td>
+				<td class="transition_metal">
+					<p class="e_mass">58,6934</p>
+					<p class="symbol">Ni</p>
+					<p class="e_nb">28</p>
+				</td>
+				<td class="transition_metal">
+					<p class="e_mass">63,546</p>
+					<p class="symbol">Cu</p>
+					<p class="e_nb">29</p>
+				</td>
+				<td class="poor_metal">
+					<p class="e_mass">65,38</p>
+					<p class="symbol">Zn</p>
+					<p class="e_nb">30</p>
+				</td>
+				<td class="poor_metal">
+					<p class="e_mass">69,723</p>
+					<p class="symbol">Ga</p>
+					<p class="e_nb">31</p>
+				</td>
+				<td class="metalloid">
+					<p class="e_mass">72,630</p>
+					<p class="symbol">Ge</p>
+					<p class="e_nb">32</p>
+				</td>
+				<td class="metalloid">
+					<p class="e_mass">74,921595</p>
+					<p class="symbol">As</p>
+					<p class="e_nb">33</p>
+				</td>
+				<td class="others_nonmetal">
+					<p class="e_mass">78,971</p>
+					<p class="symbol">Se</p>
+					<p class="e_nb">34</p>
+				</td>
+				<td class="halogen">
+					<p class="e_mass">79,904</p>
+					<p class="symbol liquid">Br</p>
+					<p class="e_nb">35</p>
+				</td>
+				<td class="noble_gas">
+					<p class="e_mass">83,798</p>
+					<p class="symbol gas">Kr</p>
+					<p class="e_nb">36</p>
+				</td>
+			</tr>
+			<tr><!--5e line -->
+				<td class="alkali">
+					<p class="e_mass">85,4678</p>
+					<p class="symbol">Rb</p>
+					<p class="e_nb">37</p>
+				</td>
+				<td class="alkaline_earth_metal">
+					<p class="e_mass">87,62</p>
+					<p class="symbol">Sr</p>
+					<p class="e_nb">38</p>
+				</td>
+				<td class="space"i></td>
+				<td class="transition_metal">
+					<p class="e_mass">88,90584</p>
+					<p class="symbol">Y</p>
+					<p class="e_nb">39</p>
+				</td>
+				<td class="transition_metal">
+					<p class="e_mass">91,224</p>
+					<p class="symbol">Zr</p>
+					<p class="e_nb">40</p>
+				</td>
+				<td class="transition_metal">
+					<p class="e_mass">92,90637</p>
+					<p class="symbol">Nb</p>
+					<p class="e_nb">41</p>
+				</td>
+				<td class="transition_metal">
+					<p class="e_mass">95,95</p>
+					<p class="symbol">Mo</p>
+					<p class="e_nb">42</p>
+				</td>
+				<td class="transition_metal">
+					<p class="e_mass">98</p>
+					<p class="symbol">Tc</p>
+					<p class="e_nb">43</p>
+				</td>
+				<td class="transition_metal">
+					<p class="e_mass">101,07</p>
+					<p class="symbol">Ru</p>
+					<p class="e_nb">44</p>
+				</td>
+				<td class="transition_metal">
+					<p class="e_mass">102,9055</p>
+					<p class="symbol">Rh</p>
+					<p class="e_nb">45</p>
+				</td>
+				<td class="transition_metal">
+					<p class="e_mass">106,42</p>
+					<p class="symbol">Pd</p>
+					<p class="e_nb">46</p>
+				</td>
+				<td class="transition_metal">
+					<p class="e_mass">107,8682</p>
+					<p class="symbol">Ag</p>
+					<p class="e_nb">47</p>
+				</td>
+				<td class="poor_metal">
+					<p class="e_mass">112,414</p>
+					<p class="symbol">Cd</p>
+					<p class="e_nb">48</p>
+				</td>
+				<td class="poor_metal">
+					<p class="e_mass">114,818</p>
+					<p class="symbol">In</p>
+					<p class="e_nb">49</p>
+				</td>
+				<td class="poor_metal">
+					<p class="e_mass">118,710</p>
+					<p class="symbol">Sn</p>
+					<p class="e_nb">50</p>
+				</td>
+				<td class="metalloid">
+					<p class="e_mass">121,76</p>
+					<p class="symbol">Sb</p>
+					<p class="e_nb">51</p>
+				</td>
+				<td class="metalloid">
+					<p class="e_mass">127,6</p>
+					<p class="symbol">Te</p>
+					<p class="e_nb">52</p>
+				</td>
+				<td class="halogen">
+					<p class="e_mass">126,90447</p>
+					<p class="symbol">I</p>
+					<p class="e_nb">53</p>
+				</td>
+				<td class="noble_gas">
+					<p class="e_mass">131,293</p>
+					<p class="symbol gas">Xe</p>
+					<p class="e_nb">54</p>
+				</td>
+			</tr>
+			<tr><!--6e line -->
+				<td class="alkali">
+					<p class="e_mass">132,905452</p>
+					<p class="symbol">Cs</p>
+					<p class="e_nb">55</p>
+				</td>
+				<td class="alkaline_earth_metal">
+					<p class="e_mass">137,327</p>
+					<p class="symbol">Ba</p>
+					<p class="e_nb">56</p>
+				</td>
+				<td class="lanthanide" colspan="2" >
+					<p>Lanthanides</p>
+					<p class="symbol">57-71</p>
+				</td>
+				<td class="transition_metal">
+					<p class="e_mass">178,49</p>
+					<p class="symbol">Hf</p>
+					<p class="e_nb">72</p>
+				</td>
+				<td class="transition_metal">
+					<p class="e_mass">180,94788</p>
+					<p class="symbol">Ta</p>
+					<p class="e_nb">73</p>
+				</td>
+				<td class="transition_metal">
+					<p class="e_mass">183,84</p>
+					<p class="symbol">W</p>
+					<p class="e_nb">74</p>
+				</td>
+				<td class="transition_metal">
+					<p class="e_mass">186,207</p>
+					<p class="symbol">Re</p>
+					<p class="e_nb">75</p>
+				</td>
+				<td class="transition_metal">
+					<p class="e_mass">190,23</p>
+					<p class="symbol">Os</p>
+					<p class="e_nb">76</p>
+				</td>
+				<td class="transition_metal">
+					<p class="e_mass">192,217</p>
+					<p class="symbol">Ir</p>
+					<p class="e_nb">77</p>
+				</td>
+				<td class="transition_metal">
+					<p class="e_mass">195,084</p>
+					<p class="symbol">Pt</p>
+					<p class="e_nb">78</p>
+				</td>
+				<td class="transition_metal">
+					<p class="e_mass">196,966569</p>
+					<p class="symbol">Au</p>
+					<p class="e_nb">79</p>
+				</td>
+				<td class="poor_metal">
+					<p class="e_mass">200,592</p>
+					<p class="symbol liquid">Hg</p>
+					<p class="e_nb">80</p>
+				</td>
+				<td class="poor_metal">
+					<p class="e_mass">204,3835</p>
+					<p class="symbol">Tl</p>
+					<p class="e_nb">81</p>
+				</td>
+				<td class="poor_metal">
+					<p class="e_mass">207,2</p>
+					<p class="symbol">Pb</p>
+					<p class="e_nb">82</p>
+				</td>
+				<td class="poor_metal">
+					<p class="e_mass">208,9804</p>
+					<p class="symbol">Bi</p>
+					<p class="e_nb">83</p>
+				</td>
+				<td class="poor_metal desintegration">
+					<p class="e_mass">209</p>
+					<p class="symbol">Po</p>
+					<p class="e_nb">84</p>
+				</td>
+				<td class="metalloid desintegration">
+					<p class="e_mass">210</p>
+					<p class="symbol">At</p>
+					<p class="e_nb">85</p>
+				</td>
+				<td class="noble_gas desintegration">
+					<p class="e_mass">222</p>
+					<p class="symbol gas">Rn</p>
+					<p class="e_nb">86</p>
+				</td>
+			</tr>
+			<tr><!--7e line -->
+				<td class="alkali desintegration">
+					<p class="e_mass">223</p>
+					<p class="symbol">Fr</p>
+					<p class="e_nb">87</p>
+				</td>
+				<td class="alkaline_earth_metal desintegration">
+					<p class="e_mass">226</p>
+					<p class="symbol">Ra</p>
+					<p class="e_nb">88</p>
+				</td>
+				<td class="actinide" colspan="2" >
+					<p>Actinides</p>
+					<p class="symbol">89-103</p>
+				</td>
+				<td class="transition_metal synthetic">
+					<p class="e_mass">267</p>
+					<p class="symbol">Rf</p>
+					<p class="e_nb">104</p>
+				</td>
+				<td class="transition_metal synthetic">
+					<p class="e_mass">268</p>
+					<p class="symbol">Db</p>
+					<p class="e_nb">105</p>
+				</td>
+				<td class="transition_metal synthetic">
+					<p class="e_mass">269</p>
+					<p class="symbol">Sg</p>
+					<p class="e_nb">106</p>
+				</td>
+				<td class="transition_metal synthetic">
+					<p class="e_mass">270</p>
+					<p class="symbol">Bh</p>
+					<p class="e_nb">107</p>
+				</td>
+				<td class="transition_metal synthetic">
+					<p class="e_mass">277</p>
+					<p class="symbol">Hs</p>
+					<p class="e_nb">108</p>
+				</td>
+				<td class="unclassified synthetic">
+					<p class="e_mass">278</p>
+					<p class="symbol">Mt</p>
+					<p class="e_nb">109</p>
+				</td>
+				<td class="unclassified synthetic">
+					<p class="e_mass">281</p>
+					<p class="symbol">Ds</p>
+					<p class="e_nb">110</p>
+				</td>
+				<td class="unclassified synthetic">
+					<p class="e_mass">282</p>
+					<p class="symbol">Rg</p>
+					<p class="e_nb">111</p>
+				</td>
+				<td class="transition_metal synthetic">
+					<p class="e_mass">285</p>
+					<p class="symbol">Cn</p>
+					<p class="e_nb">112</p>
+				</td>
+				<td class="unclassified synthetic">
+					<p class="e_mass">286</p>
+					<p class="symbol">Nh</p>
+					<p class="e_nb">113</p>
+				</td>
+				<td class="unclassified synthetic">
+					<p class="e_mass">289</p>
+					<p class="symbol">Fl</p>
+					<p class="e_nb">114</p>
+				</td>
+				<td class="unclassified synthetic">
+					<p class="e_mass">289</p>
+					<p class="symbol">Mc</p>
+					<p class="e_nb">115</p>
+				</td>
+				<td class="unclassified synthetic">
+					<p class="e_mass">293</p>
+					<p class="symbol">Lv</p>
+					<p class="e_nb">116</p>
+				</td>
+				<td class="unclassified synthetic">
+					<p class="e_mass">294</p>
+					<p class="symbol">Ts</p>
+					<p class="e_nb">117</p>
+				</td>
+				<td class="unclassified synthetic">
+					<p class="e_mass">294</p>
+					<p class="symbol">Og</p>
+					<p class="e_nb">118</p>
+				</td>
+			</tr>
+			<tr><!--8e line -->
+				<td class="space" colspan="4"></td>
+				<td class="lanthanide">
+					<p class="e_mass">138,90547</p>
+					<p class="symbol">La</p>
+					<p class="e_nb">57</p>
+				</td>
+				<td class="lanthanide">
+					<p class="e_mass">140,116</p>
+					<p class="symbol">Ce</p>
+					<p class="e_nb">58</p>
+				</td>
+				<td class="lanthanide">
+					<p class="e_mass">140,90766</p>
+					<p class="symbol">Pr</p>
+					<p class="e_nb">59</p>
+				</td>
+				<td class="lanthanide">
+					<p class="e_mass">144,242</p>
+					<p class="symbol">Nd</p>
+					<p class="e_nb">60</p>
+				</td>
+				<td class="lanthanide desintegration">
+					<p class="e_mass">145</p>
+					<p class="symbol">Pm</p>
+					<p class="e_nb">61</p>
+				</td>
+				<td class="lanthanide">
+					<p class="e_mass">150,36</p>
+					<p class="symbol">Sm</p>
+					<p class="e_nb">62</p>
+				</td>
+				<td class="lanthanide">
+					<p class="e_mass">151,964</p>
+					<p class="symbol">Eu</p>
+					<p class="e_nb">63</p>
+				</td>
+				<td class="lanthanide">
+					<p class="e_mass">157,25</p>
+					<p class="symbol">Gd</p>
+					<p class="e_nb">64</p>
+				</td>
+				<td class="lanthanide">
+					<p class="e_mass">158,92535</p>
+					<p class="symbol">Tb</p>
+					<p class="e_nb">65</p>
+				</td>
+				<td class="lanthanide">
+					<p class="e_mass">162,5</p>
+					<p class="symbol">Dy</p>
+					<p class="e_nb">66</p>
+				</td>
+				<td class="lanthanide">
+					<p class="e_mass">164,93033</p>
+					<p class="symbol">Ho</p>
+					<p class="e_nb">67</p>
+				</td>
+				<td class="lanthanide">
+					<p class="e_mass">168,93422</p>
+					<p class="symbol">Er</p>
+					<p class="e_nb">68</p>
+				</td>
+				<td class="lanthanide">
+					<p class="e_mass">293</p>
+					<p class="symbol">Tm</p>
+					<p class="e_nb">69</p>
+				</td>
+				<td class="lanthanide">
+					<p class="e_mass">173,045</p>
+					<p class="symbol">Yb</p>
+					<p class="e_nb">70</p>
+				</td>
+				<td class="lanthanide">
+					<p class="e_mass">174,9668</p>
+					<p class="symbol">Lu</p>
+					<p class="e_nb">71</p>
+				</td>
+			</tr>
+			<tr><!--9e line -->
+				<td class="space" colspan="4"></td>
+				<td class="actinide desintegration">
+					<p class="e_mass">227</p>
+					<p class="symbol">Ac</p>
+					<p class="e_nb">89</p>
+				</td>
+				<td class="actinide">
+					<p class="e_mass">232,0377</p>
+					<p class="symbol">Th</p>
+					<p class="e_nb">90</p>
+				</td>
+				<td class="actinide desintegration">
+					<p class="e_mass">231,03588</p>
+					<p class="symbol">Pa</p>
+					<p class="e_nb">91</p>
+				</td>
+				<td class="actinide">
+					<p class="e_mass">238,02891</p>
+					<p class="symbol">U</p>
+					<p class="e_nb">92</p>
+				</td>
+				<td class="actinide desintegration">
+					<p class="e_mass">237</p>
+					<p class="symbol">Np</p>
+					<p class="e_nb">93</p>
+				</td>
+				<td class="actinide desintegration">
+					<p class="e_mass">244</p>
+					<p class="symbol">Pu</p>
+					<p class="e_nb">94</p>
+				</td>
+				<td class="actinide synthetic">
+					<p class="e_mass">243</p>
+					<p class="symbol">Am</p>
+					<p class="e_nb">95</p>
+				</td>
+				<td class="actinide synthetic">
+					<p class="e_mass">247</p>
+					<p class="symbol">Cm</p>
+					<p class="e_nb">96</p>
+				</td>
+				<td class="actinide synthetic">
+					<p class="e_mass">247</p>
+					<p class="symbol">Bk</p>
+					<p class="e_nb">97</p>
+				</td>
+				<td class="actinide synthetic">
+					<p class="e_mass">251</p>
+					<p class="symbol">Cf</p>
+					<p class="e_nb">98</p>
+				</td>
+				<td class="actinide synthetic">
+					<p class="e_mass">252</p>
+					<p class="symbol">Es</p>
+					<p class="e_nb">99</p>
+				</td>
+				<td class="actinide synthetic">
+					<p class="e_mass">257</p>
+					<p class="symbol">Fm</p>
+					<p class="e_nb">100</p>
+				</td>
+				<td class="actinide synthetic">
+					<p class="e_mass">258</p>
+					<p class="symbol">Md</p>
+					<p class="e_nb">101</p>
+				</td>
+				<td class="actinide synthetic">
+					<p class="e_mass">259</p>
+					<p class="symbol">No</p>
+					<p class="e_nb">102</p>
+				</td>
+				<td class="actinide synthetic">
+					<p class="e_mass">266</p>
+					<p class="symbol">Lr</p>
+					<p class="e_nb">103</p>
+				</td>
+			</tr>
+			<tfoot>
+				<tr>
+					<td colspan="3" style="border:4px solid black;text-align:center;font-size:2em;">Legend</td>
+				</tr>
+				<tr style="text-align:center;">
+					<td class="space">Solid</td>
+					<td class="space gas">Gas</td>
+					<td class="space liquid">Liquid</td>
+				</tr>
+				<tr>
+					<td class="legends" colspan="6">Metals</td>
+					<td class="space"></td>
+					<td class="legends" colspan="3">Non-metals</td>
+				</tr>
+				<tr>
+					<td class = alkali>
+						<p>Alkali</p>
+					</td>
+					<td class = alkaline_earth_metal>
+						<p>Alkaline earth metal</p>
+					</td>
+					<td class = lanthanide>
+						<p>Lanthanide</p>
+					</td>
+					<td class = actinide>
+						<p>Actinide</p>
+					</td>
+					<td class = transition_metal>
+						<p>Transition metal</p>
+					</td>
+					<td class = poor_metal>
+						<p>Poor metal</p>
+					</td>
+					<td class = metalloid>
+						<p>Metalloid</p>
+					</td>
+					<td class = others_nonmetal>
+						<p>Others non metal</p>
+					</td>
+					<td class = halogen>
+						<p>Halogen</p>
+					</td>
+					<td class = noble_gas>
+						<p>Noble gas</p>
+					</td>
+					<td class = unclassified colspan="2">
+						<p>Unclassified</p>
+					</td>
+					<td class = "space" colspan="1"></td>
+					<td class = primordial colspan="2">
+						<p>Primordial</p>
+					</td>
+					<td class = desintegration colspan="2">
+						<p>Desintegration</p>
+					</td>
+					<td class = synthetic colspan="2">
+						<p>Synthetic</p>
+					</td>
+				</tr>
+			</tfoot>
+		</table>
+		<img id="bg" src="http://www.geowiki.fr/images/b/b1/Mendele%C3%AFev.jpg" alt="Mendeleiv" />
+		<footer>
+			<p style="text-align:right;">© roster 2019</p>
+	</body>
+</html>

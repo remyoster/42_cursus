@@ -1,0 +1,70 @@
+nav
+{
+	width:75%;
+}
+.menu
+{
+	display:flex;
+	justify-content:space-around;;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+.submenu
+{
+	display:none;
+	list-style-type:none;
+	margin:auto;
+	padding:0;
+}
+a
+{
+	display:block;
+	width:200px;
+	height:40px;
+	line-height:40px;
+	text-align:center;
+	background-color:#99ccff;
+	border-radius:10px;
+	box-shadow:6px 6px 6px black;
+	text-decoration:none;
+	color:white;
+	font-size:2vm;
+}
+.gros
+{
+	color:black;
+}
+.menu li:hover ul
+{
+	display:block;
+}
+.pain
+{
+	background-color:#995c00;
+}
+.salade
+{
+	background-color:green;
+}
+.tomate
+{
+	background-color:red;
+}
+.jambon
+{
+	background-color:pink;
+}
+.chevre
+{
+	background-color:white;
+	color:black;
+}
+p
+{
+	font-size:4em;
+}
+a:hover
+{
+	opacity:0.5;
+}

@@ -1,0 +1,384 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+	background-color: #faebd703;
+}
+
+/* HEADER AND NAVIGATION  */
+
+header{
+	width: 100%;
+	height: 420px;
+  position: relative;
+	margin: 0 auto;
+	padding: 150px 0 0;
+	background-image: url(img/multifruix.jpg);
+	background-repeat: no-repeat;
+	background-position-x: center;
+	color: white;
+	text-align: center;
+}
+
+header > div{
+	width: 1280px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  width: 200px;
+  margin: 5px;
+  text-decoration: none;
+}
+
+#logo img {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+#logo span {
+  display: inline-block;
+  vertical-align: baseline;
+  color: #000;
+  font-size: 16px;
+}
+
+h1{
+  font-family: 'Montserrat', sans-serif;
+	font-size: 48px;
+	font-weight: bold;
+}
+
+h2{
+  font-family: 'Montserrat', sans-serif;
+	font-size: 22px;
+	font-weight: 100;
+}
+
+header nav {
+    position: absolute;
+    top: 0px;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    height: 50px;
+    padding-top: 10px;
+}
+
+header nav a { color: #000; display: block; padding: 0.7em 1.5em; text-decoration: none; }
+header nav a:hover { color: #F55; }
+header nav ul,
+header nav ul li { list-style-type: none; padding: 0; margin: 0; }
+header nav > ul {text-align: center; }
+header nav > ul > li { display: inline-block; }
+
+header ul{
+  font-family: "Courier New", Courier, monospace;
+  color: #000;
+}
+
+header ul.menu-wrapper{
+  margin: auto;
+}
+
+.sub-menu-parent { position: relative; }
+
+#menu1{
+  cursor:pointer;
+  text-align: center;
+  background-color: rgba(255, 125, 128, .5);
+  padding: 0 15px;
+}
+
+#menu2{
+  cursor:pointer;
+  text-align: center;
+  background-color: rgba(255, 255, 128, .5);
+}
+
+#menu3{
+  cursor:pointer;
+  text-align: center;
+  background-color: rgba(128, 255, 128, .5);
+}
+
+#menu3{
+  cursor:pointer;
+  text-align: center;
+  background-color: rgba(128, 255, 128, .5);
+}
+
+#menu4{
+  cursor:pointer;
+  text-align: center;
+  background-color: rgba(128, 201, 255, 0.5);
+}
+
+.sub-menu { 
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #DDD;
+  transform: translateY(-2em);
+  z-index: -1;
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+}
+
+.sub-menu-parent:hover .sub-menu{
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+  transform: translateY(0%);
+  transition-delay: 0s, 0s, 0.3s;
+}
+
+/* HOME */
+
+.main-content{
+	width: 1280px;
+	margin: 0 auto;
+}
+
+h3 {
+	font-size: 36px;
+	font-weight: 100;
+	color: green;
+	text-align: center;
+}
+
+.products{
+	display: flex;
+  flex-wrap: wrap;
+	width: 100%;
+}
+
+.products > div {
+	width: 30%;
+	margin: 1em 0.8em 2.5em;
+	position: relative;
+	text-align: center;
+	border-radius: 2px;
+	background-color: #fff;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+	transition: all 0.3s ease-in-out;
+}
+
+.products > div:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.products > div:hover::after {
+  opacity: 1;
+}
+
+.products > div > img {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.infos-produit {
+	width: 80%;
+  margin: 0 auto;
+}
+
+.infos-produit h4{
+	text-align: center;
+}
+
+.infos-produit p{
+  height: 91px;
+  overflow: overlay;
+}
+
+.buy {
+	display: inline-block;
+	padding: 10px 15px;
+	margin: 0 auto;
+	color: green;
+	border: 1px solid green;
+	border-radius: 20px;
+	text-decoration: none;
+}
+
+.news {
+      text-align: center;
+}
+
+.news img{
+      width: 250px;
+    display: block;
+    margin-bottom: 50px;
+    margin: 0 auto 50px;
+}
+
+/* PRODUCTS PAGE */
+
+#products-nav {
+  width: 100%;
+}
+
+#products-nav > ul {
+  list-style-type: none;
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+#products-nav > ul > li >a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #000;
+}
+
+.choose{
+  width: 210px;
+  margin: 0 auto;
+}
+
+.choose > label{
+  line-height: 26px;
+}
+
+.products input.qty{
+  width: 63px;
+  border: 1px solid #80808033 !important;
+  border-radius: 3px !important;
+}
+
+
+
+/* LOGIN */
+
+.main-content > form {
+  width: 350px;
+  margin: 0 auto;
+  padding: 1.5em 5em 3em;
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+
+.main-content > form > .legend{
+  font-size: 22px;
+  line-height: 100px;
+  text-align: center;
+}
+
+.main-content > form > label {
+  font-size: 15px;
+}
+
+.main-content > form > label > input{
+  border: 1px solid #8080804a;
+  border-radius: 2px;
+  padding: 4px 10px;
+  margin: 5px 0;
+}
+
+/* MEMBER PAGE */
+
+.main-content.member-space > form{
+  width: 385px;
+}
+
+.main-content.member-space > form > label{
+  line-height: 30px;
+}
+
+/* MEMBER PAGE */
+
+.main-content.admin-space > table{
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.main-content.admin-space > form{
+  width: 90%;
+  margin: 4em auto;  
+}
+
+.main-content.admin-space > form > label{
+  line-height: 30px;
+}
+
+.main-content.admin-space  > form > input{
+  border: 1px solid #8080804a;
+  border-radius: 2px;
+  padding: 4px 10px;
+  margin: 5px 0;
+}
+
+span.bold {
+  display: block;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+td.bold {
+  font-weight: bold;
+}
+
+/* PRODUCT PAGE */
+
+
+.main-content.product-page > div{
+  width: 1080px;
+}
+
+.main-content.product-page > div > img,
+.main-content.product-page > div > div.infos-product{
+  display: inline-block;
+  vertical-align: middle;
+  width: 49%;
+}
+
+.main-content.product-page label {
+  line-height: 55px;
+}
+
+.main-content.product-page input {
+  display: block;
+}
+
+input.buy {
+  padding: 10px 15px;
+  margin: 30px auto;
+  color: green;
+  border: 1px solid green;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+input[type='number'] {
+  display: inline-block;
+}
+
+
+/* BASKET */
+
+.main-content.basket table {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.main-content.basket table tr{
+    line-height: 28px;
+}
+
+.main-content.basket table input{
+    padding: 14px 42px;
+    margin: 30px auto;
+    color: green;
+    border: 1px solid green;
+    border-radius: 28px;
+    text-decoration: none;
+    font-size: 15px;
+}

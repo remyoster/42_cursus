@@ -1,0 +1,91 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    fdf_map.sh                                         :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: lojesu <marvin@42.fr>                      +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/02/12 15:04:41 by lojesu            #+#    #+#              #
+#    Updated: 2019/02/13 07:51:41 by roster           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+
+
+#colors
+BLACK='\033[30m'
+RED='\033[31m'
+GREEN='\033[32m'
+YELLOW='\033[33m'
+BLUE='\033[34m'
+PURPLE='\033[35m'
+CYAN='\033[36m'
+GREY='\033[37m'
+
+#path
+SPWD= pwd/maps/
+
+function header()
+{
+	clear
+	echo "$PURPLE"
+	echo " ##################################################################"
+	echo " ##			    MAP SELECTOR			##"
+	echo " ##################################################################$GREY"
+	echo "$GREEN-------------------------------------------------------------------"
+	echo "$GREEN-------------------------------------------------------------------"
+}
+
+while :
+do
+	header
+	echo "$GREY\nHOW TO USE :"
+	echo "$GREY Enter a number on the prompt to run ./fdf on the associated map :"
+	echo "$GREY (You can find each maps (and more) on the folder /maps)\n"
+	echo "$GREEN BASIC MAPS :		COOL MAPS :"
+	echo "$YELLOW (1) $GREY 10-2		$YELLOW(7)  $GREY PYRAMIDE"
+	echo "$YELLOW (2) $GREY 10-70		$YELLOW(8)  $GREY VOLCANO"
+	echo "$YELLOW (3) $GREY 100-6		$YELLOW(9)  $GREY PYLONE"
+	echo "$YELLOW (4) $GREY 50-4		$YELLOW(10) $GREY EUROPE"
+	echo "$YELLOW (5) $GREY 42		$YELLOW(11) $GREY FRANCE"
+	echo "$YELLOW (6) $GREY ELEM		$YELLOW(12) $GREY CENTRAL AMERICA"
+	echo "$YELLOW 			(13) $GREY MARS"
+	echo "$YELLOW 			(14) $GREY VENUS"
+	echo "$YELLOW \n(q)	$RED  --QUIT-- $GREEN"
+	echo "$GREEN-------------------------------------------------------------------"
+	echo "$GREEN-------------------------------------------------------------------"
+	read  -p "Your choice : " bite
+	if [ "$bite" = "1" ]; then
+		./fdf maps/10-2.fdf
+	elif [ "$bite" = "2" ]; then
+		./fdf maps/10-70.fdf
+	elif [ "$bite" = "3" ]; then
+		./fdf maps/100-6.fdf
+	elif [ "$bite" = "4" ]; then
+		./fdf maps/50-4.fdf
+	elif [ "$bite" = "5" ]; then
+		./fdf maps/42.fdf
+	elif [ "$bite" = "6" ]; then
+		./fdf maps/elem.fdf
+	elif [ "$bite" = "7" ]; then
+		./fdf maps/pyramide.fdf
+	elif [ "$bite" = "8" ]; then
+		./fdf maps/volcano.fdf
+	elif [ "$bite" = "9" ]; then
+		./fdf maps/pylone.fdf
+	elif [ "$bite" = "10" ]; then
+		./fdf maps/europe.fdf
+	elif [ "$bite" = "11" ]; then
+		./fdf maps/france.fdf
+	elif [ "$bite" = "12" ]; then
+		./fdf maps/central_american.fdf
+	elif [ "$bite" = "13" ]; then
+		./fdf maps/mars.fdf
+	elif [ "$bite" = "14" ]; then
+		./fdf maps/venus.fdf
+	elif [ "$bite" = "q" ]; then
+		break ;
+	fi
+	break ;	
+done
+clear

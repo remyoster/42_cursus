@@ -1,0 +1,19 @@
+# To test the project you can run test_script which is going to compile the
+# dynamyc library (malloc.so) and compile some tests in test folder + one script
+# to link the library when needed (run_sh).
+# ex : ./test2 -> use official malloc while ./run_sh ./test2 will use mine
+
+
+## N.B :
+## In able to test the library we need to precise to the linker where he can
+## find it. Type the following command or create a script (if so do not
+## forget to add $@ add the end of the script)
+
+## LINUX
+export LD_LIBRARY_PATH=.
+export LD_PRELOAD=libft_malloc.so
+
+## MAC
+export DYLD_LIBRARY_PATH=.
+export DYLD_INSERT_LIBRARIES="libft_malloc.so"
+export DYLD_FORCE_FLAT_NAMESPACE=1

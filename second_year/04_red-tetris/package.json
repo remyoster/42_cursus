@@ -1,0 +1,23 @@
+{
+  "name": "red_tetris",
+  "version": "1.0.0",
+  "description": "Scripts to launch red tetris in dev mode or test mod",
+  "scripts": {
+    "start": "cd server && npm start",
+    "client": "cd client && npm start",
+    "install-client": "cd client && npm install && npm run build",
+    "server": "cd server && npm run dev-start",
+    "install-server": "cd server && npm install",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "install-all": "npm install && concurrently --kill-others-on-fail \"npm run install-server\" \"npm run install-client\"",
+    "test-client": "cd client && npm run test:watch",
+    "test-server": "cd server && npm run test",
+    "test": "concurrently --kill-others-on-fail \"npm run test-client\" \"npm run test-server\""
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0"
+  },
+  "engines": {
+    "node": "12.x"
+  }
+}

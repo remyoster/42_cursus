@@ -1,0 +1,105 @@
+header {
+	display: flex;
+	/*flex-direction: column;*/
+	background-color: #8EC83C;
+	width: 100%;
+}
+
+#topnav {
+	display: flex;
+	width: 100%;
+	background-color: #8EC83C;
+}
+
+#topnav a {
+	padding: 10px 30px;
+	text-decoration: none;
+	font-size: 1.5em;
+	color: #f8f9f4;
+}
+
+#topnav > a:hover {
+	background-color:#b1d6e3;
+}
+
+#topnav > a:hover .infobulle {
+	visibility: visible;
+}
+.avatar {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	margin-right: 10px;
+	float: left;
+}
+.infobulle {
+	position: absolute;
+	visibility: hidden;
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px;
+	font-size: 0.5em;
+	z-index: 1;
+	top: 60px;
+}
+#notif-bar, #chat-bar {
+	margin-top: auto;
+	margin-bottom: auto;
+	display: flex;
+	color: white;
+	font-size: 1.5em;
+	padding: 10px 20px;
+	cursor: pointer;
+}
+
+#notif-wrapper {
+	position: absolute;
+	max-width: 250px;
+	max-height: 200px;
+	overflow: auto;
+	overflow-wrap: break-word;
+	right: 60px;
+	top:40px;
+	color: black;
+	font-size: 0.7em;
+	background-color:white;
+	padding: 5px;
+	border-radius: 10px;
+	display:none;
+}
+.notif {
+	cursor: default;
+	vertical-align: middle;
+	border-radius: 10px;
+}
+.notif:hover {
+	background-color: #8EC83C;
+}
+
+.notifUserPic {
+	margin-right: 10px;
+height: 40px;
+width: 40px;
+border-radius: 20px;
+}
+#topnav .icon {
+	display: none;
+}
+
+@media only screen and (max-width: 725px) {
+	#topnav > a:not(.icon) {
+	display : none;
+}
+	#topnav .icon {
+		display: block;
+	}
+	#topnav.responsive {
+		display: flex;
+		flex-direction: column;
+	}
+	#topnav.responsive > a {
+		display: block;
+	}
+}

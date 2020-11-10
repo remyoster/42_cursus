@@ -1,0 +1,6 @@
+echo "\033[35mSystem updating\033[0m"
+echo "\033[32m-------------------------------------" >> /var/log/update_script.log
+date >> /var/log/update_script.log
+echo "-------------------------------------\033[0m" >> /var/log/update_script.log
+apt-get update >> /var/log/update_script.log
+apt-get dist-upgrade >> /var/log/update_script.log

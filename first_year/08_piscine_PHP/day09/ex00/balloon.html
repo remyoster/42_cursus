@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Balloon</title>
+		<style>
+#cercle {
+	height: 200px;
+	width: 200px;
+	background-color: red;
+	border-radius: 100%;
+}
+		</style>
+	</head>
+	<body>
+		<div id = "cercle"></div>
+		<script>
+var id = document.getElementById("cercle");
+var colors = ["red", "green", "blue"];
+var i = 0;
+var size = 200;
+function change_color(id)
+{
+	i++;
+	i > 2 ? i = 0 : i;
+	size += 10;
+	size > 420 ? size = 200 : size;
+	id.style.backgroundColor = colors[i];
+	id.style.width = size + "px";
+	id.style.height = size + "px";
+}
+function change_size(id)
+{
+	i--;
+	i < 0 ? i = 2 : i;
+	size -= 5;
+	size < 200 ? size = 200 : size;
+	id.style.backgroundColor = colors[i];
+	id.style.width = size + "px";
+	id.style.height = size + "px";
+}
+
+id.onclick = function (){change_color(id)};
+id.onmouseleave = function (){change_size(id)};
+		</script>
+	</body>
+</html>

@@ -1,0 +1,47 @@
+#!/bin/bash
+
+if [ "$1" == "clean" ]; then
+	echo "Cleaning repo"
+	make fclean
+	rm -f test0 test1 test2 test3_1 test3_2 test4 test5 test6 test7 test8 run_sh
+	exit 1
+fi
+
+#to make sure it works
+echo "Calling make and make clean"
+sleep 0.2
+make && make clean
+echo "Deleting all test execs and run_sh files"
+sleep 0.2
+rm -f test0 test1 test2 test3_1 test3_2 test4 test5 test6 test7 test8 run_sh
+
+
+# compilation of all test files in folder /tests
+echo "Compiling each test"
+sleep 0.2
+gcc -o test0 tests/test0.c
+gcc -o test1 tests/test1.c
+gcc -o test2 tests/test2.c
+gcc -o test3_1 tests/test3_1.c
+gcc -o test3_2 tests/test3_2.c
+gcc -o test4 tests/test4.c
+gcc -o test5 tests/test5.c -L. -lft_malloc
+gcc -o test6 tests/test6.c -L. -lft_malloc -pthread
+gcc -o test7 tests/test7.c
+gcc -o test8 tests/test8.c -L. -lft_malloc
+
+# creation of run_sh script
+echo "Creating the run_sh script"
+distri=$(uname -a)
+reg="L|linux"
+if [[ $distri =~ $reg ]]; then
+	echo "#!/bin/sh" >> run_sh
+	echo "export LD_LIBRARY_PATH=." >> run_sh
+	echo "export LD_PRELOAD=libft_malloc.so" >> run_sh
+else
+	echo "export DYLD_LIBRARY_PATH=." >> run_sh
+	echo "export DYLD_INSERT_LIBRARIES=libft_malloc.so" >> run_sh
+	echo "export DYLD_FORCE_FLAT_NAMESPACE=1" >> run_sh
+fi
+echo "\$@" >> run_sh
+chmod +x run_sh

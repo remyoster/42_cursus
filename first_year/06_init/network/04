@@ -1,0 +1,1 @@
+netstat -r -n | grep 'default' -m 1 | awk '{print $2}'

@@ -1,0 +1,6 @@
+*.vs_code
+*.swp
+objs/
+a.out
+tests/bigfile
+tests/verybigfile

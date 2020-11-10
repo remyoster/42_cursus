@@ -1,0 +1,31 @@
+# Fdf
+
+## Description
+>All programms you made until now executed themselves in text mode in your terminal. Let's discover now something more exciting : how to open a graphic window and draw in it ? To start your journey in the land of graphical programmation, Fdf propose to you some wireframe mesh representation of a 3D field.
+
+## Objectives
+* Simple graphic library
+* Segment drawing
+* Events
+* 3D projection into 2D
+
+## Skills
+* Graphics
+* Imperative programming
+* Rigor
+* Algorithms & AI
+
+## Usage
+`make` then `./fdf [filename]` or `./map_selector`
+They are test maps in /maps folder
+
+### ScreenShots
+_Map selector script_</br>
+<img src="https://github.com/remyoster/42_cursus/blob/master/04_fdf/.resources/launch_script.png" width="100%">
+_42_</br>
+_Pyramide_</br>
+_France_</br>
+_Europa_</br>
+
+## Contributors
+@lojesu (Lorenzo Jesu) 

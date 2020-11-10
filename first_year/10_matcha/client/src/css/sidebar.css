@@ -1,0 +1,44 @@
+.sidebar {
+  margin: 3%;
+	padding: 0px;
+	display: flex;
+	font-size: 1.1rem;
+}
+.sideContainer {
+  width: 30%;
+	color: #374140;
+}
+.sideContainer ul {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: #f8f9f4;
+  text-align: center;
+  background-color: #8EC83C;
+  list-style: none;
+}
+.sideContainer > ul > li {
+  color: #f8f9f4;
+  font-size: 1.2em;
+  padding: 15px 0px;
+  width: 100%;
+  cursor: pointer;
+}
+.sideContainer li:hover {
+  color:#b1d6e3;
+}
+.container {
+  width: 65%;
+	padding: 5px 2%;
+  color: #374140;
+}
+.container h2 {
+  margin: 0px 0px 20px;
+  text-align: center;
+}
+.currentInfo {
+  background-color: #374140;
+}
+/*****   COMPONENT    ****/

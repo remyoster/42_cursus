@@ -1,0 +1,7 @@
+En graphique :
+- Si la session est deja connectee sur un user il suffit de cliquer sur le bouton d'alimentation en haut a droite puis de cliquer sur user et switch user. Ensuite cliquer sur l'user voulu et entrer le mdp
+- Si la session n'est pas encore connectee la liste de tous les users apparait.
+
+En ssh:
+- Si la session est deja connectee il faut taper la commande ssh <nom_utilisateur>@localhost puis rentrer le mdp
+- Plus generalement il faut taper ssh <nom_utilisateur>@<adresse_ip> (ajouter -p pour choisir le port, puis rentrer le nom d'un port)

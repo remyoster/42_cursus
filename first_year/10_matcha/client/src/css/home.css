@@ -1,0 +1,77 @@
+.homeLogout {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Crimson Text', serif;
+  background-image: url('/public/img/matcha.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  width: 100%;
+  min-height: 50vw;
+  margin: 0px;
+}
+
+.homeLogout > div {
+  display:flex;
+  flex-direction: column;
+  margin: 20% 2% 0px 75%;
+  padding: 0px 10px;
+  color: #374140;
+  background-color: #4fd13c;
+  border-radius: 20px;
+}
+.home {
+  display: flex;
+  justify-content: center;
+  margin: 5% auto;
+  box-shadow: 0px 0px 5px 5px #8EC83C;
+  background-color: #f8f9f4;
+  color: #374140;
+  width: 50%;
+  padding: 2% 0px;
+}
+#heart {
+ position:relative;
+ width:100px;
+ height:100px;
+ margin:10% auto 0 auto;
+ background: #8EC83C;
+ -ms-transform: rotate(45deg); /* IE 9 */
+ -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+ transform: rotate(45deg);
+}
+#heart:before,
+#heart:after {
+  position:absolute;
+  content: "";
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  background:#8EC83C;
+  top: -50%;
+  left: 0;
+}
+#heart:after {
+  left: -50%;
+  top: 0;
+}
+@-webkit-keyframes pulse {to {box-shadow: 0 0 150px 5px rgba(142, 200, 60, 1);width:120px;height:120px;}}
+@-moz-keyframes pulse {to {box-shadow: 0 0 150px 5px rgba(142, 200, 60, 1);width:120px;height:120px;}}
+@-ms-keyframes pulse {to {box-shadow: 0 0 150px 5px rgba(142, 200, 60, 1);width:120px;height:120px;}}
+@keyframes pulse {to {box-shadow: 0 0 150px 5px rgba(142, 200, 60, 1);width:120px;height:120px;}}
+
+#heart:hover {
+  width:100px;
+  height:100px;
+  margin:10% auto 0 auto;
+  background: #8EC83C;
+  -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+    position:relative;
+    box-shadow: 0 0 0 -1px rgba(142, 200, 60, 0);
+    -webkit-animation: pulse .75s infinite cubic-bezier(0.66, 0, 0, 1);
+  -moz-animation: pulse .75s infinite cubic-bezier(0.66, 0, 0, 1);
+  -ms-animation: pulse .75s infinite cubic-bezier(0.66, 0, 0, 1);
+  animation: pulse .75s infinite cubic-bezier(0.66, 0, 0, 1);
+}

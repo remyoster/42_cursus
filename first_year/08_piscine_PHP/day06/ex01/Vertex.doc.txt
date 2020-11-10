@@ -1,0 +1,16 @@
+The Vertex class handles vertex creation.
+
+An instance can be constructed from a list of given points.
+new Vertex( array( 'x' => 12.34, 'y' => 12.34, 'z' => 12.34, 'w' => 12.34, 'color' => Color ( array( 'rgb' => 12345)) );
+x, y, z are required and w and the color are optionnal.
+With: 
+- x as abscisse
+- y as ordered
+- z as depth
+- w as homogeneous coordinate
+- Color as the results of the class Color
+
+The class provides the following methods :
+For each param respectively x, y, z, w, color :
+Vertex setAtt($att);
+Vertex getAtt($att);

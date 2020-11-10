@@ -1,0 +1,124 @@
+body
+{
+	margin:0;
+	padding:0;
+}
+table
+{
+	border-spacing:5px;
+	width:90%;
+	height:90%;
+}
+caption
+{
+	font-size:2vw;
+}
+tr
+{
+	height:8%;
+}
+td
+{
+	border:2px solid black;
+	width:8%;
+	height:8%;
+}
+td p
+{
+	margin:0px;
+	padding:0px;
+	font-size:1vw;
+}
+#bg
+{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+.e_mass
+{
+	text-align:right;
+	font-size:0.5vw;
+}
+.symbol
+{
+	text-align:center;
+	padding:5px;
+	font-size:2vw;
+}
+.e_nb
+{
+	text-align:left;
+	font-size:1vw;
+}
+.space
+{
+	border:none;
+}
+.legends
+{
+	border:none;
+	text-align:center;
+	background-color:#ffe5e5;
+	font-size:1vw;
+}
+.others_nonmetal
+{
+	background-color:#66ff33;
+}
+.alkali
+{
+	background-color:#ff471a;
+}
+.alkaline_earth_metal
+{
+	background-color:#ffbf80;
+}
+.metalloid
+{
+	background-color:#bbbb77;
+}
+.halogen
+{
+	background-color:#ffff4d;
+}
+.noble_gas
+{
+	background-color:#99ccff;
+}
+.poor_metal
+{
+	background-color:#cccccc;
+}
+.transition_metal
+{
+	background-color:#f7a1a1;
+}
+.lanthanide
+{
+	background-color:#d372f3;
+}
+.actinide
+{
+	background-color:#f372b3;
+}
+.unclassified
+{
+	background-color:#f2f2f2;
+}
+.desintegration
+{
+	border:2px dashed black;
+}
+.synthetic
+{
+	border:2px dotted black;
+}
+.gas
+{
+	color:#ff0000;
+}
+.liquid
+{
+	color:blue;
+}

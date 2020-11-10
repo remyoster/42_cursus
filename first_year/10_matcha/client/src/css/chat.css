@@ -1,0 +1,107 @@
+.chatWindow-wrapper {
+	display: flex;
+	flex-direction: row-reverse;
+	position: fixed;
+	bottom: 0%;
+	z-index: 1;
+	width: 100%;
+	padding:0;
+	margin:0;
+}
+
+.chatWindow {
+	height: 300px;
+	width: 200px;
+	margin: 2px;
+	border-radius: 20px 20px 0px 0px;
+	border: 1px solid white;
+	background-color: white;
+	z-index: 2;
+}
+
+.chatWindowHeader {
+	/*background-color: #8EC83C;*/
+	background-color: green;
+	cursor: pointer;
+	display: flex;
+	align-items: baseline;
+}
+
+.chatWindowContent {
+	overflow: scroll;
+	height: 200px;
+}
+.chatWindowContent ul {
+	padding:0;
+}
+.chatWindowContent ul li {
+	margin-top: 2px;
+	width: 50%;
+	text-align: center;
+	overflow-wrap: break-word;
+	border-radius: 5px;
+}
+
+.chatWindow form input {
+	color: white;
+	position: absolute;
+	z-index:3;
+	bottom:0%;
+	background-color: #8EC83C;
+	font-size: 1em;
+	padding:0;
+	margin:0;
+}
+
+.chatWindow form textarea {
+	position: absolute;
+	resize: none;
+	width: 180px;
+	bottom: 5%;
+	border-top: 2px solid #8EC83C;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+}
+
+.chatWindow form textarea:focus {
+	box-shadow: 0px 0px 0px 0px green;
+}
+
+.online-icon {
+	font-size: 0.7em;
+}
+
+#chatUsers {
+	display: none;
+	background-color: white;
+	padding: 10px;
+}
+.chatUser {
+	cursor: pointer;
+	    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.chatUser:hover {
+	background-color: #8EC83C;
+	width: 100%;
+}
+.chatUserPic {
+	height: 40px;
+	width: 40px;
+	border-radius: 20px;
+}
+.notif-counter {
+	background-color: red;
+	font-size:0.5em;
+	width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 20px;
+    color: white;
+}
+.Window-icon {
+}

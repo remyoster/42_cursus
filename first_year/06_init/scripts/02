@@ -1,0 +1,5 @@
+echo "\033[31m//User logued deleting script\\ \\033[0m"
+echo "Please enter un logued_user_name"
+read user_name
+killall -u $user_name
+userdel -r $user_name

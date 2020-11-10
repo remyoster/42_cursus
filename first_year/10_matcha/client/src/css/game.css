@@ -1,0 +1,72 @@
+/** GAME **/
+.gameTitle {
+	text-align: center;
+	text-shadow: 10px 10px 10px green;
+	color: #374140;
+}
+
+.suggMatch {
+	width: 80%;
+	margin-left: 10%;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	color: #374140;
+}
+.suggInfo {
+	text-align: left;
+	width: 50%;
+	margin-left: 25%;
+}
+.suggMatch img {
+	width: 50%;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 8px;
+	box-shadow: 0 0 9px 2px rgba(0, 0, 0, 0.4);
+}
+.switchWrapper {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.switchIcon {
+	color: #8EC83C;
+	font-size: 5vmax;
+	cursor: pointer;
+}
+.switchIconDis {
+	color: #374140;
+	font-size: 5vmax;
+	cursor: pointer;
+}
+
+.suggMatch > h3 {
+	margin: 10px 0px 0px 0px;
+}
+.suggMatch > h4 {
+	margin: 0px 0px 20px 0px;
+	color: #83EC3C;
+}
+.filter-wrapper {
+display: flex;
+padding: 0;
+justify-content: center;
+
+}
+.filter {
+	padding: 5px;
+}
+.filter:nth-child(1) {
+	text-decoration: underline;
+}
+.love-button {
+	color: red;
+	font-size: 5vmax;
+	cursor: pointer;
+	margin: 10px auto;
+	transition: all .5s linear;
+}
+.love-button:hover {
+	transform: scale(1.1);
+}
