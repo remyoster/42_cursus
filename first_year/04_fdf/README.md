@@ -21,9 +21,9 @@ They are test maps in /maps folder
 
 ### ScreenShots
 _Map selector script_</br>
-<img src="https://github.com/remyoster/42_cursus/blob/master/04_fdf/.resources/launch_script.png" width="100%">
-_42_</br>
 _Pyramide_</br>
+_42_</br>
+<img src="https://github.com/remyoster/42_cursus/blob/main/first_year/04_fdf/.ressources/42.png" width="100%">
 _France_</br>
 _Europa_</br>
 
