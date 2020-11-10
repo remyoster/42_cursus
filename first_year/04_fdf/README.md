@@ -21,11 +21,19 @@ They are test maps in /maps folder
 
 ### ScreenShots
 _Map selector script_</br>
+<img src="https://github.com/remyoster/42_cursus/blob/main/first_year/04_fdf/.ressources/launch_script.png" width="100%" />
+
 _Pyramide_</br>
+<img src="https://github.com/remyoster/42_cursus/blob/main/first_year/04_fdf/.ressources/Pyramide.png" width="100%" />
+
 _42_</br>
-<img src="https://github.com/remyoster/42_cursus/blob/main/first_year/04_fdf/.ressources/42.png" width="100%">
+<img src="https://github.com/remyoster/42_cursus/blob/main/first_year/04_fdf/.ressources/42.png" width="100%" />
+
 _France_</br>
+<img src="https://github.com/remyoster/42_cursus/blob/main/first_year/04_fdf/.ressources/France.png" width="100%">
+
 _Europa_</br>
+<img src="https://github.com/remyoster/42_cursus/blob/main/first_year/04_fdf/.ressources/France.png" width="100%">
 
 ## Contributors
 @lojesu (Lorenzo Jesu) 
