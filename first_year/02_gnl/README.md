@@ -12,3 +12,14 @@
 * Imperative programming
 * Rigor
 * Algorithms & AI
+
+## Usage
+prototype : `int get_next_line(const int fd, char **line);`</br>
+```
+while(get_next_line(1, line))
+{
+	ft_putstr(line);
+	ft_putchar('\n');
+	free(line);
+}
+```

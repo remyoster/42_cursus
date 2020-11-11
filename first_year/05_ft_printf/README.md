@@ -14,8 +14,8 @@
 * Algorithms & AI
 
 ## Usage
-prototype : `int ft_printf(const char *fmt, ...);`
-`ft_printf("%s\n%d\n", "Hello World", 42)`
+prototype : `int ft_printf(const char *fmt, ...);`</br>
+```ft_printf("%s\n%d\n", "Hello World", 42);```
 
 ## Contributors
 @lojesu (Lorenzo Jesu) 
