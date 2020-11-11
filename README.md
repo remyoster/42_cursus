@@ -1,5 +1,5 @@
 # 42_cursus
-My 42's projects divided in two parts (a 4 mounth internship seperate them)
+My 42's projects divided in two parts (a 4 month internship seperate them)
 
 ## First part
 ### Lang : 
@@ -51,7 +51,7 @@ All theese projects were designed to be compiled with clang on MacOS. For web pr
 C, Python, Javascript
 
 ### Skills :
-Unix, Algorithms & AI, 
+Unix, Algorithms & AI, Web, Technology integration, Object-oriented programming, Functional programming, Imperative programming, Rigor, Security, 
 
 ### Projects :
 1. **malloc:**  <span style="color:green">`107/100`</span> 
