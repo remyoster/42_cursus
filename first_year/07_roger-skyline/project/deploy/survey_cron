@@ -1,0 +1,10 @@
+#!/bin/sh
+
+NAME_FILE="/etc/crontab"
+LAST_MODIF=$(date -r ${NAME_FILE} '+%d/%m/%Y %H:%M:%S')
+MAIL_ADMIN="root@localhost"
+DATE_MODIF=
+if [ "${LAST_MODIF}" != "${DATE_MODIF}" ]; then
+	MESSAGE="Alert, file ${NAME_FILE} has been modified the ${LAST_MODIF}";
+	echo "$MESSAGE" | mail -s "Alert survey" "${MAIL_ADMIN}";
+fi

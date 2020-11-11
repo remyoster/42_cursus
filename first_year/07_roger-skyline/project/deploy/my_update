@@ -1,0 +1,17 @@
+#!/bin/sh
+
+### BEGIN INIT INFO
+# Provides:          my_update
+# Required-Start:    $local_fs $network
+# Required-Stop:     $local_fs
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Update 
+# Description:       Script for uploading the system's sources and packages
+### END INIT INFO
+
+echo "\033[32m----------------------------" >> /var/log/update_script.log
+date -u >> /var/log/update_script.log
+echo "----------------------------\033[0m" >> /var/log/update_script.log
+sudo apt-get update >> /var/log/update_script.log
+sudo apt-get dist-upgrade -y >> /var/log/update_script.log

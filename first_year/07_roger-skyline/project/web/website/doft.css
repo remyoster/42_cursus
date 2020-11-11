@@ -1,0 +1,185 @@
+body
+{
+	display:flex;
+	flex-direction:column;
+	background-color:#4d4d4d;
+	justify-content:center;
+	align-items:center;
+}
+header
+{
+	display:flex;
+	justify-content:space-between;
+	background-color:rgb(145, 145, 145);
+	border-radius:10px;
+	box-shadow:10px 10px 10px black;
+	width:1400px;
+	height:117px;
+	padding:10px;
+}
+section
+{
+	display:flex;
+	justify-content:space-between;
+	width:1400px;
+}
+article
+{
+	width:1019px;
+	height:583px;
+	background-color:rgb(145, 145, 145);
+	border-radius:10px;
+	box-shadow:10px 10px 10px black;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+article img
+{
+	width:1000px;
+	height:561px;
+}
+aside
+{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	background-color:rgb(145, 145, 145);
+	width:140px;
+	height:424px;
+	border-radius:10px;
+	box-shadow:10px 10px 10px black;
+}
+button
+{
+	width:76px;
+	height:20px;
+	border:1px solid grey;
+	border-radius:3px;
+	background-color:#f0f4f7;
+}
+input
+{
+	width:380px;
+	border-top:2px solid grey;
+	border-left:2px solid grey;
+	border-right:2px solid white;
+	border-bottom:2px solid white;
+}
+.left
+{
+	justify-content:space-around;
+}
+.left img
+{
+	width:70px;
+	height:65px;
+}
+.left img:nth-child(3)
+{
+	border:5px solid red;
+	border-radius:5px;
+}
+.right
+{
+	padding-top:10px;
+	justify-content:start;
+}
+.right img:nth-child(1)
+{
+	width:70px;
+	height:100px;
+}
+.right img:nth-child(2)
+{
+	width:80px;
+	height:63px;
+}
+.right div
+{
+	background-image:url('resources/brick.jpg');
+	background-repeat:repeat;
+	width:120px;
+	height:70px;
+}
+.top_banner_elem
+{
+	display:flex;
+}
+#main_banner
+{
+	display:table-cell;
+	justify-content:flex-start;
+	width:50%;
+}
+#loupe
+{
+	height:125%;
+}
+#reload
+{
+	width:20px;
+	height:20px;
+}
+#close
+{
+	width:20px;
+	height:20px;
+}
+#interaction
+{
+	position:relative;
+	bottom:50px;
+	right:475px;
+	width:520px;
+	height:170px;
+	padding:10px;
+	background-color:#90EE90;
+	border-radius:10px;
+	box-shadow:10px 10px 10px black;
+}
+#interaction p
+{
+	font-size:large;
+	font-weight:lighter;
+	font-family:Arial, Helvetica, sans-serif;
+	letter-spacing:0.5px;
+
+}
+#interaction span:nth-child(1)
+{
+	font-size:2em;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+#interaction span:nth-child(3)
+{
+	text-shadow:5px 4px 5px #f53d3d;
+}
+.top_ban
+{
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+}
+#invisible_link
+{
+	position:absolute;
+	top:500px;
+	display:flex;
+	justify-content:space-between;
+	width:500px;
+}
+.invisible_link_ikea
+{
+	position:absolute;
+	left:70px;
+	width:130px;
+	height:180px;
+}
+.invisible_link_apple
+{
+	position:absolute;
+	left:550px;
+	width:180px;
+	height:130px;
+}

@@ -1,0 +1,217 @@
+#############
+##PARTIE VM##
+#############
+Lors de la creation veiller a creer une taille de 7.46 Gio (le plus proche de 8GO) et de partitionner un home de 3.7Gio (le plus proche de 4.2 GO)
+- Pour verifier que la taille de disque soit de 8go et les partitions :
+fdisk -l = nous montre les differentes partitions et leur taille ainsi que la taille du disque maitre
+! 8GO = 7,45058GiO et 8GiO = 8,58993 GO.
+- Pour verifier que la machine est a jour sur l'ensemble de ses packets on peut faire un 
+apt-get update puis un apt-get upgrade (si une install se fait -> 0)
+
+
+#############################
+##PARTIE RESEAU ET SECURITE##
+#############################
+
+# Pour creer un utilisateur non root on peut le faire soit a l'install direct soit avec la commande adduser <username>
+
+--------
+##SUDO##
+--------
+# Pour utiliser sudo il faut au prealable l'installer (apt-get install sudo).
+ Ensuite il faut verifier dans le fichier /etc/sudoers que la ligne suivant 
+'Allow members of group sudo to execute any command' soit bien decommentee.
+Puis il faut rajouter notre user en dessous avec la meme syntaxe (ALL=..) OU utiliser la commande
+adduser user sudo. Reboot pour prendre en compte
+
+-------------
+##STATIC IP##
+-------------
+# Pour configurer manuellement son reseau :
+Modifier le fichier /etc/network/interfaces et y ajouter la condiguration voulu (cf debian.org)
+Penser a desactiver le service DHDCP s'il existe (systemctl)
+EXEMPLE : WM en BRIDGED ADAPTER, en0: Ethernet adress IP 10.13.0.39
+Laissez la config de base (dhcp) pour voir l'adresse IP attribuee PUIS modifier le fichier /etc/network/interfaces
+auto enp0s3
+iface enp0s3 inet static
+address 10.13.0.39
+gateway 10.13.254.254
+netmask 255.255.255.252
+network 10.13.0.36
+broadcast 10.13.0.39
+
+https://myridia.com/dev_posts/view/724
+Pour calculer les mask et autres : http://jodies.de/ipcalc?host=10.13.0.122&mask1=24&mask2=
+
+-------
+##SSH##
+-------
+# Pour modifier le port ssh par defaut il faut editer le fichier /etc/ssh/sshd_config
+et decommenter la ligne du Port et y mettre celui qu'on veut
+# Pour ne pas permettre l'acces a root il faut PermitRootLogin No
+# Penser a restart le service 
+# Pour pouvoir se connecter uniquement en publickeys il faut : 
+	# generer une paire de clefs sur notre machine client ssh-keygen
+	# copier la clef sur le serveur (ou bien tout faire a la mano) ou bien utiliser la comande : 
+	# ssh-copy-id -i ~/ssh/id_rsa.pub <user@ipadress>
+	# ensuite modifier le fichier de config sshd_config en mettant:
+		# PubkeyAuthentification yes
+		# PasswordAuthentification no
+		# PermitEmptyPasswords no
+		# ChallengeResponseAuthentification no
+		# UsePAM no
+# Pour copier sa clef : ssh-copy-id -i ~/.ssh/id_dsa.pub user@machine
+# si les regles iptables et la config ssh est deja en place il preferable
+de copier le contenu du dosier .ssh d'un user actuel et de le mettre dans
+le home du nouvel utilisateur en lui modifiant les droits avec :
+chown -R name:name .ssh
+- Pour se premunir du DOS sur le port ssh on peut (en plus de changer le port par defaut)
+mettre en place une regle dans iptables qui limite les nouvelles connexions a 3 echec par minute et qui log le tout (ou bien fail2ban).
+iptables -N LOGDROP
+iptables -A LOGDROP -j LOG
+iptables -A LOGDROP -j DROP
+iptables -I INPUT -p tcp --dport 22 -i eth0 -m state --state NEW -m recent --set
+iptables -I INPUT -p tcp --dport 22 -i eth0 -m state --state NEW -m recent  --update --seconds 60 --hitcount 4 -j LOGDROP
+
+------------
+##FIREWALL##
+------------
+Tuto basique :
+-https://openclassrooms.com/fr/courses/1197906-securiser-son-serveur-linux
+-http://olivieraj.free.fr/fr/linux/information/firewall/fw-03-05.html
+-https://geekeries.org/2017/12/configuration-avancee-du-firewall-iptables/?cn-reloaded=1ttps://www.microlinux.fr/iptables/
+
+Quelaues infos sur iptables :
+- IPTABLES, iptables -L pour voir la liste de tout. l'idee est de tout bloquer puis d'autoriser au fur et a mesure.
+sachant que les regles ne sont pas permanentes donc il faut creer un script. 
+- iptables -F = flush les regles (supprime toutes les regles)
+- iptables -P = applique une police par defaut sur la chaine
+- iptables -A = rajout de regles / -m ecoute le status
+- Donc iptables -A INPUT -m state --state ESTABLISHED, RELATED -j ACCEPT ecoute les connexions existantes et les accepte
+- Pour voir les port utilises par notre machine on peut taper la commande netstat --inet -npl (n = adresse num, p = programme correspondant, l = listen) ou ss
+- le port ssh est le 1222, donc pour l'accepter on ajoute la ligne
+iptables -A INPUT -p (=protocol) tcp --dport (=le port d'ecoute) 1222 -j ACCEPT
+- pour autoriser les connexion entrantes et sortantes du local (loopback) :
+iptables -A INPUT -i lo -j ACCEPT
+iptables -A OUPUT -o lo -j ACCEPT
+l'option limite permet de d'appliquer une limite de temps a l'aplication de la regle
+si le burst est atteint.
+Les logs (si regle LOG precisee) se retrouvent dans /var/log/messages
+
+ Pour rendre ces regles permanantes :
+-creer notre script et l.executer pour que les regles s'appliquent. Sauvegarder les regles grace a iptables-save > /etc/firewall.conf. 
+Puis ouvrir /etc/network/if-up.d/iptables et y ajouter les script suivant : 
+	#!/bin/sh
+	iptables-restore < /etc/firewall.conf
+
+-Si ca ne fonctionne pas non plus il faut executer notre script pour avoir les regles puis installer itapbles-persistent et le lancer en acceptant de sauvegarder les regles ip4 actuelles. Ou alors iptables-save > /etc/iptables/rules.v4
+
+
+------------------
+##DOS PROTECTION##
+------------------
+https://openclassrooms.com/fr/courses/1197906-securiser-son-serveur-linux
+-installer Libapache2-mod-evasive
+https://wiki.debian-fr.xyz/Libapache2-mod-evasive
+- installer fail2ban
+https://wiki.debian-fr.xyz/Fail2ban#Fail2ban_avec_mod-evasive
+https://doc.ubuntu-fr.org/fail2ban
+
+///FAIL2BAN\\\ :
+- /usr/bin/fail2ban-client status => permet de voir l'etat de ses jails
+- /var/log/fail2ban est le log d’alerte de fail2ban
+creer le fichier /etc/fail2ban/jail.local et y mettre les jails 
+
+
+-------------------------
+##PORTS SCAN PROTECTION##
+-------------------------
+Portsentry le fait bien (en fonction de notre firewall): 
+https://wiki.debian-fr.xyz/Portsentry
+-il faut configurer via le fichier /etc/portsentry/portsentry.conf
+- pour verifier le bon ban des IP on peut utiliser la commande iptables -L -n -v ou iptables -S
+De base avec la config du wiki, il bloque et ban les IP qui tentent les scans.
+
+cf :
+https://openclassrooms.com/fr/courses/1197906-securiser-son-serveur-linux
+
+- Pour voir quels sont nos differents ports ouverts :
+netstat -paunt
+-a : Tous les ports
+-t : Tous les ports TCP
+-u : Tous les ports UDP
+-l : Tous les ports en écoute
+-n : Affiche directement les IP. Pas de résolution de nom.
+-p : Affiche le nom du programme et le PID associé.
+
+- utiliser le par feu iptables :
+http://olivieraj.free.fr/fr/linux/information/firewall/fw-03-07.html
+
+
+---------------------
+##SERVICES INUTILES##
+---------------------
+systemctl status => voir les services 
+OU
+systemctl list-unit-files
+systemctl disable <services inutiles>
+
+
+- AVAHI-DAEMON : decouvre automatiquement les ressources reseau et s'y connecte. Il attribue
+une adresse IP et fait office de DNS. Pour le desactiver -> /etc/default/avahi-daemon et changer la ligne
+AVAHI_DAEMON_START de 1 a 0
+- Si serveur print installer : apt-get autoremove --purge cups
+
+
+------------------
+##SERVICE UTILES##
+------------------
+systemctl status => voir les services 
+
+- system.slice = agent qui gere de maniere hierarchique un groupe de process
+- systemd-timesyncd.service/timedated.service= gere la synchronisation des horloges de la machine
+- fail2ban.service = protection contre les DOS
+- dbus.service = système simple de messages inter-processus (démon et utilitaires)
+- ssh.service : gere les connexions ssh
+- systemd-logind.service = gere le log des utilisateurs
+- ifup/ifdown = gere la configuration des interfaces reseaux
+- portsentry.service = programme de detection et de blocage de "scans de ports"
+- cron.service = planificateur de taches
+- apache2.service = serveur HTTP web
+- systemd-udevd.service = ecoute les evenements lies au kernel et applique des regles en fonction
+- rsyslog.service = permet de transferer des messages log (ex erreur etc..) a travers une IP reseau
+- systemd-journald.service = collecte et stocke des donnees de log
+- exim4.service = Agent de transport de de message (MTA). NB : l'agent utilisateur est le MUA
+et l'agent de distribution est le MDA
+
+
+--------
+##MAIL##
+--------
+mutt -f DOSSIER permet de lire les mails d'une mailbox
+exim4 pour envoyer les mails
+
+-----------
+##SCRIPTS##
+-----------
+- Pour rendre un script executable par all : chmod +x nom_script
+
+///Mise a jour\\\
+echo "\033[32m-------------------------------------" >> /var/log/update_script.log
+date -u>> /var/log/update_script.log
+echo "-------------------------------------\033[0m" >> /var/log/update_script.log
+sudo apt-get update >> /var/log/update_script.log
+sudo apt-get dist-upgrade -y>> /var/log/update_script.log
+Puis dans crontab -e ajouter la ligne : 00 04 * * 1 /etc/init.d/my_update
+
+///Surveillance fichier\\\
+cf survey_cron
+- Pour executer ce script tous les jours a minuit on ajoute la ligne : 00 00 * * * root/scripts/survey_cron
+dans la crontab avec bien sur scripts/survey_cron = le path et nom de notre script
+
+##############
+##PARTIE WEB##
+##############
+- Mettre en place un serv : https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-debian-9
+- Mettre en place du ssl : https://doc.ubuntu-fr.org/tutoriel/securiser_apache2_avec_ssl
+cf website.sh et dossier web
