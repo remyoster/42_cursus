@@ -23,7 +23,6 @@ The stack : NodeJs(express) in the back, and React/Redux with material-ui on the
 _Home page_</br>
 <img src="https://github.com/remyoster/42_cursus/blob/main/first_part/04_red-tetris/.ressources/home.png" width="100%" />
 
-
 _Game choice_</br>
 <img src="https://github.com/remyoster/42_cursus/blob/main/first_part/04_red-tetris/.ressources/game_choice.png" width="100%" />
 

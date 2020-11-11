@@ -14,7 +14,7 @@ Imperative programming, Rigor, Algorithms & AI, Unix, Group & interpersonal, Gra
 _Remplementation of some basic functions from the C standard library_
 2. **get_next_line:**  <span style="color:green">`125/100`</span> 
 [_repo_](https://github.com/remyoster/42_cursus/tree/main/first_part/02_gnl)</br>
-_Read mutiple file descriptors line by line using our libft's functions_
+_Read multiple file descriptors line by line using our libft_
 3. **fillit:**  <span style="color:green">`100/100`</span> 
 [_repo_](https://github.com/remyoster/42_cursus/tree/main/first_part/03_fillit)</br>
 _Find the smallest possible square which can contain a given list of tetriminos_
@@ -51,18 +51,18 @@ All theese projects were designed to be compiled with clang on MacOS. For web pr
 C, Python, Javascript
 
 ### Skills :
-Unix, Algorithms & AI, Web, Technology integration, Object-oriented programming, Functional programming, Imperative programming, Rigor, Security, 
+Unix, Algorithms & AI, Web, Technology integration, Object-oriented programming, Functional programming, Imperative programming, Rigor, Security
 
 ### Projects :
 1. **malloc:**  <span style="color:green">`107/100`</span> 
 [_repo_](https://github.com/remyoster/42_cursus/tree/main/second_part/01_malloc)</br>
-_Remplementation of the memory management function malloc_
+_Reimplementation of the memory management "function" malloc_
 2. **ft_ssl_md5:**  <span style="color:green">`100/100`</span> 
 [_repo_](https://github.com/remyoster/42_cursus/tree/main/second_part/02_ft_ssl_md5)</br>
-_Remplementation of hashing functions of md5 and sha family_
+_Reimplementation of hashing functions of md5 and sha family_
 3. **computorv1:**  <span style="color:green">`106/100`</span> 
 [_repo_](https://github.com/remyoster/42_cursus/tree/main/second_part/03_computorv1)</br>
-_Simple polynomial equation solver (2nd degree max)_
+_Simple polynomial equation solver (2nd degree max) written in python_
 4. **red-tetris:**  <span style="color:green">`125/100`</span> 
 [_repo_](https://github.com/remyoster/42_cursus/tree/main/second_part/04_red-tetris)</br>
 _Multiplayer online tetris game with React/Express and socket.io_
