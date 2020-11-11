@@ -23,19 +23,19 @@ Once it's done you can return back to /server folder and run `npm install && npm
 ## Screenshots
 
 _Login_</br>
-<img src="https://github.com/remyoster/42_cursus/blob/main/first_year/11_hypertube/.ressources/login.png" width="100%" /></br>
+<img src="https://github.com/remyoster/42_cursus/blob/main/first_part/11_hypertube/.ressources/login.png" width="100%" /></br>
 
 _Home_</br>
-<img src="https://github.com/remyoster/42_cursus/blob/main/first_year/11_hypertube/.ressources/home.png" width="100%" /></br>
-<img src="https://github.com/remyoster/42_cursus/blob/main/first_year/11_hypertube/.ressources/home2.png" width="100%" /></br>
+<img src="https://github.com/remyoster/42_cursus/blob/main/first_part/11_hypertube/.ressources/home.png" width="100%" /></br>
+<img src="https://github.com/remyoster/42_cursus/blob/main/first_part/11_hypertube/.ressources/home2.png" width="100%" /></br>
 
 _Profil_</br>
-<img src="https://github.com/remyoster/42_cursus/blob/main/first_year/11_hypertube/.ressources/profil.png" width="100%" />
+<img src="https://github.com/remyoster/42_cursus/blob/main/first_part/11_hypertube/.ressources/profil.png" width="100%" />
 
 _Streaming_</br>
-<img src="https://github.com/remyoster/42_cursus/blob/main/first_year/11_hypertube/.ressources/42_movie.png" width="100%" />
-<img src="https://github.com/remyoster/42_cursus/blob/main/first_year/11_hypertube/.ressources/42_movie2.png" width="100%" />
-<img src="https://github.com/remyoster/42_cursus/blob/main/first_year/11_hypertube/.ressources/42_movie3.png" width="100%" />
+<img src="https://github.com/remyoster/42_cursus/blob/main/first_part/11_hypertube/.ressources/42_movie.png" width="100%" />
+<img src="https://github.com/remyoster/42_cursus/blob/main/first_part/11_hypertube/.ressources/42_movie2.png" width="100%" />
+<img src="https://github.com/remyoster/42_cursus/blob/main/first_part/11_hypertube/.ressources/42_movie3.png" width="100%" />
 
 ## Features
 * English and french languages available (and synopsys translate on the fly)

@@ -9,4 +9,4 @@
 * Network & system administration
 * Unix
 
-You can find the subject [_here_](https://github.com/remyoster/42_cursus/blob/main/first_year/06_init/.ressources/init.en.pdf)
+You can find the subject [_here_](https://github.com/remyoster/42_cursus/blob/main/first_part/06_init/.ressources/init.en.pdf)

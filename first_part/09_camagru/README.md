@@ -20,14 +20,14 @@ To install and config the DB go to /config folder. Then import camagru.sql and c
 
 ## Screenshots
 _Home page_</br>
-<img src="https://github.com/remyoster/42_cursus/blob/main/first_year/09_camagru/.ressources/home.png" width="100%" />
+<img src="https://github.com/remyoster/42_cursus/blob/main/first_part/09_camagru/.ressources/home.png" width="100%" />
 
 
 _Account creation_</br>
-<img src="https://github.com/remyoster/42_cursus/blob/main/first_year/09_camagru/.ressources/account_creation.png" width="100%" />
+<img src="https://github.com/remyoster/42_cursus/blob/main/first_part/09_camagru/.ressources/account_creation.png" width="100%" />
 
 _Member space_</br>
-<img src="https://github.com/remyoster/42_cursus/blob/main/first_year/09_camagru/.ressources/member_space.png" width="100%" />
+<img src="https://github.com/remyoster/42_cursus/blob/main/first_part/09_camagru/.ressources/member_space.png" width="100%" />
 
 _Photo montage_</br>
-<img src="https://github.com/remyoster/42_cursus/blob/main/first_year/09_camagru/.ressources/photo_montage.png" width="100%" />
+<img src="https://github.com/remyoster/42_cursus/blob/main/first_part/09_camagru/.ressources/photo_montage.png" width="100%" />

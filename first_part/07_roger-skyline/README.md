@@ -12,7 +12,7 @@
 * Network & system administration
 * Unix
 
-You can find the subject [_here_](https://github.com/remyoster/42_cursus/blob/main/first_year/07_roger-skyline/.ressources/subject.pdf)
+You can find the subject [_here_](https://github.com/remyoster/42_cursus/blob/main/first_part/07_roger-skyline/.ressources/subject.pdf)
 
 We had to create and configure a debian VM and render the shasum of it in correction
 to proove that it hasn't been modified. So this repo contain my notes / solutions to install it.
