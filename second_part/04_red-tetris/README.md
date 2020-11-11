@@ -21,20 +21,20 @@ The stack : NodeJs(express) in the back, and React/Redux with material-ui on the
 
 ## Screenshots
 _Home page_</br>
-<img src="https://github.com/remyoster/42_cursus/blob/main/first_part/10_matcha/.ressources/home.png" width="100%" />
+<img src="https://github.com/remyoster/42_cursus/blob/main/first_part/04_red-tetris/.ressources/home.png" width="100%" />
 
 
 _Game choice_</br>
-<img src="https://github.com/remyoster/42_cursus/blob/main/first_part/10_matcha/.ressources/game_choice.png" width="100%" />
+<img src="https://github.com/remyoster/42_cursus/blob/main/first_part/04_red-tetris/.ressources/game_choice.png" width="100%" />
 
 _Game options_</br>
-<img src="https://github.com/remyoster/42_cursus/blob/main/first_part/10_matcha/.ressources/game_option.png" width="100%" /></br>
+<img src="https://github.com/remyoster/42_cursus/blob/main/first_part/04_red-tetris/.ressources/game_option.png" width="100%" /></br>
 
 _Game board_</br>
-<img src="https://github.com/remyoster/42_cursus/blob/main/first_part/10_matcha/.ressources/game_board.png" width="100%" />
+<img src="https://github.com/remyoster/42_cursus/blob/main/first_part/04_red-tetris/.ressources/game_board.png" width="100%" />
 
 _Game over_</br>
-<img src="https://github.com/remyoster/42_cursus/blob/main/first_part/10_matcha/.ressources/game_over.png" width="100%" />
+<img src="https://github.com/remyoster/42_cursus/blob/main/first_part/04_red-tetris/.ressources/game_over.png" width="100%" />
 
 ## Features
 * Client written in functionnal component and server written in OOP
