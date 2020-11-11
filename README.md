@@ -8,6 +8,7 @@ C, PHP, HTML, CSS, Javascript, SQL, noSQL, shell, unix</br>
 ### Skills :
 Imperative programming, Rigor, Algorithms & AI, Unix, Group & interpersonal, Graphics,Network & system administration, Technology integration, Web, DB & Data, Object-oriented programming, Security
 
+### Projects :
 1. **libft:**  <span style="color:green">`125/100`</span> 
 [_repo_](https://github.com/remyoster/42_cursus/tree/main/first_part/01_libft)</br>
 _Remplementation of some basic functions from the C standard library_
@@ -48,10 +49,11 @@ All theese projects were designed to be compiled with clang on MacOS. For web pr
 ## Second part
 ### Lang :
 C, Python, Javascript
+
 ### Skills :
 Unix, Algorithms & AI, 
 
-
+### Projects :
 1. **malloc:**  <span style="color:green">`107/100`</span> 
 [_repo_](https://github.com/remyoster/42_cursus/tree/main/second_part/01_malloc)</br>
 _Remplementation of the memory management function malloc_
