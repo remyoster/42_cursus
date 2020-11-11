@@ -4,8 +4,9 @@ My 42's projects divided in two parts (a 4 mounth internship seperate them)
 ## First part
 ### Lang : 
 C, PHP, HTML, CSS, Javascript, SQL, noSQL, shell, unix</br>
+
 ### Skills :
-Imperative programming, Rigor, Algorithms & AI
+Imperative programming, Rigor, Algorithms & AI, Unix, Group & interpersonal, Graphics,Network & system administration, Technology integration, Web, DB & Data, Object-oriented programming, Security
 
 1. **libft:**  <span style="color:green">`125/100`</span> 
 [_repo_](https://github.com/remyoster/42_cursus/tree/main/first_year/01_libft)</br>
@@ -41,13 +42,13 @@ _Dating website-like in Node/React/Sql (micro frameworks allowed)_
 [_repo_](https://github.com/remyoster/42_cursus/tree/main/first_year/11_hypertube)</br>
 _Video streaming website (using torrent stream) with the MERN stack (mongo, express, react, node)_
 
-N:B : All theese projects were designed to be compiled with clang on MacOS. For web projects the setup isn't provided (except for npm scripts).
+### N.B:
+All theese projects were designed to be compiled with clang on MacOS. For web projects the setup isn't provided (except for npm scripts).
 
 ## Second part
 ### Lang :
 C, Python, Javascript
 ### Skills :
-
 
 
 1. **malloc:**  <span style="color:green">`107/100`</span> 

@@ -5,9 +5,9 @@
 
 ## Objectives
 * Frameworks
-* Instant time Web
 * Streaming
 * BitTorrent
+* Translation
 
 ## Skills
 * Web
@@ -15,11 +15,10 @@
 * Security
 
 ## Usage
-The stack : NodeJs(express) in the back with SQL, and React with custom CSS on the front.
-You will have to install your own SQL server, and NodeJs.
-Then go to server/config folder and change database.js and mail.js with your credentials.
-Once it's done you can return back to /server folder and run `npm install && npm run database && npm run seed` to install and seed the database. The client is pre-builted
-so you just need to run : `npm start` to start dating.
+The stack : NodeJs(express) in the back with mongoDB, and React with material-ui on the front.
+You will have to install your own mongoDB server, and NodeJs.
+Then edit .env from .env.example and put your own credentials.
+Once it's done you can return back to /server folder and run `npm install && npm start` The client is pre-builted.
 
 ## Screenshots
 
@@ -47,14 +46,16 @@ _Streaming_</br>
 * Comments
 * Account management
 * Multi resolution (streaming)
+* Subtitles (fr and eng)
 * Mobile friendly
 * Bypass cloudflare
+* Cronjob
 
 ## Contributors
-@madufour (Marie Dufourq) 
-@jmoussu (Jim Moussu)
+@madufour (Marie Dufourq)</br>
+@jmoussu (Jim Moussu)</br>
 @bboutoil (Benjamin Boutoille)
 
 ## Disclaimers
 This project is NOT destinated to be USED. The torrent sources are
-illegals. You will need to put your own keys (see .env) to make it work.
+illegals.

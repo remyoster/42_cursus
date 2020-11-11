@@ -51,6 +51,7 @@ _Tinder like_</br>
 * Mobile friendly
 * Tinder-like
 * Auto geolocalization
+* Database seeding (with faker)
 
 ## Contributors
 @madufour (Marie Dufourq) 
