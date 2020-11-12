@@ -54,7 +54,7 @@ C, Python, Javascript
 Unix, Algorithms & AI, Web, Technology integration, Object-oriented programming, Functional programming, Imperative programming, Rigor, Security
 
 ### Projects :
-1. **malloc:**  <span style="color:green">107/100</span> 
+1. **malloc:**  ```<span style="color:green">107</span>```/100
 [_repo_](https://github.com/remyoster/42_cursus/tree/main/second_part/01_malloc)</br>
 _Reimplementation of the memory management "function" malloc_
 2. **ft_ssl_md5:**  <span style="color:green">`100/100`</span> 
