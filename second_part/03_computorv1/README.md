@@ -14,5 +14,5 @@
 ## Usage
 The programm is written in python so :</br>
 * `python computor.py` for usage
-* `python computor.py "2x + 8 -7X^2 + 15 * X^2 = 37"`
+* `python computor.py "2x + 8 -7X^2 + 15 * X^2 = 37"`</br>
 You can run `./test_script.sh` to run a bunch of tests.
