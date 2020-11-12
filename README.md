@@ -6,12 +6,12 @@ My 42's projects divided in two parts (a 4 month internship seperate them)
 C, PHP, HTML, CSS, Javascript, SQL, noSQL, shell, unix</br>
 
 ### Skills :
-Imperative programming, Rigor, Algorithms & AI, Unix, Group & interpersonal, Graphics,Network & system administration, Technology integration, Web, DB & Data, Object-oriented programming, Security
+Imperative programming, Rigor, Algorithms & AI, Unix, Group & interpersonal, Graphics, Network & system administration, Technology integration, Web, DB & Data, Object-oriented programming, Security
 
 ### Projects :
 1. **libft:**  <span style="color:green">`125/100`</span> 
 [_repo_](https://github.com/remyoster/42_cursus/tree/main/first_part/01_libft)</br>
-_Remplementation of some basic functions from the C standard library_
+_Reimplementation of some basic functions from the C standard library_
 2. **get_next_line:**  <span style="color:green">`125/100`</span> 
 [_repo_](https://github.com/remyoster/42_cursus/tree/main/first_part/02_gnl)</br>
 _Read multiple file descriptors line by line using our libft_
