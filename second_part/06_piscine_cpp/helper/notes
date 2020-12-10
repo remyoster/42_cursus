@@ -1,0 +1,162 @@
+#### https://www.cplusplus.com/ ####
+
+### Namespace ###
+namespace Foo {
+	int var = 1;
+	int *f(void) { return 2; }
+}
+namespace Muf = Foo;
+Foo::var
+Foo:: f()
+
+=> Ici on defini un namespace Foo et un Muf puis on appel les methodes dessus
+
+### Stdio streams ###
+std::cout << "Hello World!" << std::endl
+- cout = sortie standard
+- endl = retour a la ligne standard (suivant le systeme)
+- << vers 
+
+std::cin >> buff
+- cin : entree standard
+- >> depuis
+
+Donc pour print on peut :
+std::cout << "You enterred: [" << buff << "]" << std::endl
+
+### Class and instance ###
+ne pas oublier le ; a la declaration de class en hpp
+le nom de la classe en methode = constructeur (et avec ~ c'est le destructeur)
+les constructeurs et destructeurs n'ont pas de type de retour
+
+#include "Sample.class.hpp"
+int main() {
+Sample instance;
+return (0);
+}
+=> donne une variable de la classe Sample appelee instance
++ appel le constructeur. Puis quand on termine la fct toutes les vars locales
+sont detruites et donc ca call le destructeur
+
+
+### Member attributes and member functions ###
+c++ passera toujours aux functions membres le pointeur this de l'instance courante
+
+
+### this ###
+l'instance courante
+
+### Initialization list ###
+Sample2::Sample2(char p1) : a1(p1) {}
+
+
+### const ###
+grace aux init list on peut initialiser une constante dans le constructeur
+mettre const dans la definition d'une fct permet de signifier que dans cette fct
+aucune assignation ne sera faite concernant l'instance en cours.
+Donc si une fct membre n'assigne rien -> go la mettre en const
+void mafct(void) const; ->hpp
+Class::mafct(void) const {} -> cpp
+
+
+### visibility ###
+private rend prive (logique)
+_ pour prefix les identifiants prives par convention
+
+
+### class vs struct ###
+class et struct sont identiques sauf que si on precise pas de visibilite sur la 
+class tout devient prive.
+Donc une struct a un scope par defaut public alors que class c'est prive
+
+
+### accessors ###
+get Var
+set Var
+permet d'avoir un controle sur l'utilisateur (tant en sortie qu'en entree)
+
+
+### comparisons ###
+une instance n'est pas egual a une autre car leur adresse sont differentes
+
+
+### non member attributes and non member functions ###
+Dans le cas d'une fct static ou attribut static le this n'est pas passe.
+Pour initialiser un attribut static il faut le faire dans la definition de la
+classe (.cpp) avec sa valeur de retour ex : int Sample::_nbIsnt = 0;
+
+
+### pointers to members ###
+lorsqu'on declare un pointeur sur membre d'une classe on doit pour l'utiliser
+specifier sur quel instance avec .* -> instance.*p = 42;
+idem avec les fct -> (instance.*f)();
+si c'est un pointeur sur class ce sera ->*
+
+
+### new / delete ###
+new permet d'allouer et delete de desaouller (dans le cas d'une classe ca
+appel le constructeur et destructeur)
+new [] permet d'allouer des tableaux et delete [] les free. Cependant on peut pas
+mettre des params
+
+
+### references ###
+int& n est une reference sur n. c'est un pointeur constant non null dereference
+
+
+### ad-hoc polymorphism ###
+Il est possible de declarer plusieurs functions avec le meme nom et des params
+differents
+
+
+### operator overload ###
+Il est possible d'overloader des operateurs (+/-/....)
+
+
+### canonical form ###
+contient un constructeur par defaut, un par copie, un operateur =, un destructeur
+
+
+### heritage ###
+class T : public class H
+protected = attribut ou fonction uniquement accessible par la classe mere ou streams
+derivees
+
+
+### sub-typing polymorphism ###
+virtual permet de resoudre dynamiquement des actions en fonction du type de
+la classe.
+
+
+### abstract classes and interfaces ###
+une classe qui a une methode pure (virtual void ft_ds(void) = 0) ne peut pas
+etre instanciee.
+une interface est une classe qui n'a que des methodes pures et aucun attribut
+
+
+### Exceptions ###
+throw {} catch (std::exception &e) {}
+permet de gerer les erreurs
+il est aussi possible d'heriter de la class std::exception afin de creer nos erreurs customs
+
+
+### cast ###
+- dynamic_cast <new_type> (expression) => can only be used with pointers and
+	references to classes (or with void*). Is doing at runtime + return NULL if fails,
+	needs to be in context of polymorphism with at least one virtual method
+- reinterpret_cast <new_type> (expression) => converts any pointer type to any
+	other pointer type, even of unrelated classes
+- static_cast <new_type> (expression) => can perform conversions between
+	pointers to related classes
+- const_cast <new_type> (expression) => This type of casting manipulates the
+	constness of the object pointed by a pointer, either to be set or to be removed.
+il est aussi possible de rajouter des methodes de cast dans une classe
+
+
+### templates ### 
+template<typename T, ...> (... => on peut introduire plusieurs parametres)
+function//class 
+Puis ca s'utilise explicitement List<int> a(42);
+ou parfois implicitement max(a, b);
+cela permet de generer du code par le biais du compilateur (un peu comme les macros mais en mieux)
+on peut definir un type par defaut ex : template<typename T = float>

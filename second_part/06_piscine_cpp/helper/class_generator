@@ -1,0 +1,61 @@
+#!/bin/bash
+
+### Very simple class generator
+### usage : $1 = classname if $2 == "class" the classname will be filled by
+### .class. Then if $2 or $3 is create/delete it creates/deletes the class
+
+write_H_file()
+{
+	name=$2
+	touch "$name.hpp"
+	echo -n "#ifndef " >> "$name.hpp"
+	echo "$name.H" | tr a-z. A-Z_ >> "$name.hpp"
+	echo -n "# define " >> "$name.hpp"
+	echo -e "$name.H\n" | tr a-z. A-Z_ >> "$name.hpp"
+	echo -e "# include <iostream>\n" >> "$name.hpp"
+	echo -e "class $1 {\n" >> "$name.hpp"
+	echo -e "public:\n" >> "$name.hpp"
+	echo -e "\t$1(void);" >> "$name.hpp"
+	echo -e "\t$1($1 const & src);" >> "$name.hpp"
+	echo -e "\t~$1(void);" >> "$name.hpp"
+	echo -e "\n\t$1 &\toperator=($1 const & rhs);\n" >> "$name.hpp"
+	echo -e "private:\n" >> "$name.hpp"
+	echo -e "};\n" >> "$name.hpp"
+	echo -e "std::ostream &\toperator<<(std::ostream & o, $1 const & i);\n" >> "$name.hpp"
+	echo "#endif" >> "$name.hpp"
+}
+
+write_CPP_file()
+{
+	name=$2
+	touch "$name.cpp"
+	echo "#include <iostream>" >> "$name.cpp"
+	echo -e "#include \"$name.hpp\"" >> "$name.cpp"
+	echo -e "\n$1::$1(void) {\n\treturn ;\n}\n" >> "$name.cpp"
+	echo -e "$1::$1($1 const & src) {\n" >> "$name.cpp"
+	echo -e "\t*this = src;" >> "$name.cpp"
+	echo -e "\treturn ;\n}\n" >> "$name.cpp"
+	echo "$1::~$1(void) {" >> "$name.cpp"
+	echo -e "\treturn ;\n}\n" >> "$name.cpp"
+	echo -e "$1 &\t$1::operator=($1 const & rhs) {" >> "$name.cpp"
+	echo -e "\n\tif (this != &rhs)\n\t\t*this = rhs;\n" >> "$name.cpp"
+	echo -e "\treturn (*this);\n}\n" >> "$name.cpp"
+	echo -e "std::ostream &\toperator<<(std::ostream & o, $1 const & i) {\n" >> "$name.cpp"
+	echo "//o << i.getFoo()" >> "$name.cpp"
+	echo -e "\treturn (o);\n}\n" >> "$name.cpp"
+}
+
+if [ "$2" == "class" ]; then
+	name="$1.class"
+else
+	name="$1"
+fi
+if [ $# -eq 0 ]; then
+	echo "Provide a classname and the create/delete keyword"
+elif [[ "$2" == "create" || "$3" == "create" ]]; then
+	write_H_file $1 $name
+	write_CPP_file $1 $name
+elif [[ "$2" == "delete" || "$3" == "delete" ]]; then
+	rm -f "$name.cpp"
+	rm -f "$name.hpp"
+fi

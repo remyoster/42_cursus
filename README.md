@@ -48,7 +48,7 @@ All theese projects were designed to be compiled with clang on MacOS. For web pr
 
 ## Second part
 ### Lang :
-C, Python, Javascript
+C, C++, Python, Javascript
 
 ### Skills :
 Unix, Algorithms & AI, Web, Technology integration, Object-oriented programming, Functional programming, Imperative programming, Rigor, Security
@@ -69,6 +69,10 @@ _Multiplayer online tetris game with React/Express and socket.io_
 5. **philosophers:**  `100/100` 
 [_repo_](https://github.com/remyoster/42_cursus/tree/main/second_part/05_philosophers)</br>
 _Eat/sleep/think with multithreading, mutex, semaphores and processes_
+6. **piscine_cpp:**  `100/100` 
+[_repo_](https://github.com/remyoster/42_cursus/tree/main/second_part/06_piscine_cpp)</br>
+_Many exercices to learn and practice c++ (98)_
 
 ### N.B:
 C projects were designed to be compiled with gcc on MacOS and ubuntu (18.04).
+C++ projects were designed to be compiled with clang++ on ubuntu (18.04)
