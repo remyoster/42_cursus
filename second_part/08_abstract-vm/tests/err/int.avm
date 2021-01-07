@@ -1,0 +1,5 @@
+push int32(42.42)
+push int64(18)
+push int18(487874)
+dump
+exit

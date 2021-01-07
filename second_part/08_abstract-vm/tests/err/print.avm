@@ -1,0 +1,6 @@
+print
+push int32(42)
+print
+push float(16.01)
+print
+exit

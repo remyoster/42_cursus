@@ -1,0 +1,15 @@
+; -------------
+; sample2.avm -
+; -------------
+
+push int8(-42)
+print
+push int32(-247483648)
+add
+push float(44.55)
+push double(-4245464654.42545465)
+add
+push int32(42)
+dump
+pop
+exit

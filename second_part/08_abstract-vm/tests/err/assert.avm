@@ -1,0 +1,11 @@
+assert
+assert()
+assert(42)
+assert int32(42)
+push int16(42)
+assert int8(42)
+assert int16(43)
+push double(42.42)
+assert double(42.4204)
+assert double(42.420000000000001)
+exit

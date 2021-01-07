@@ -1,0 +1,9 @@
+pop
+push int32(65)
+push int32(65)
+pop
+push int32(65)
+pop
+pop
+pop
+exit

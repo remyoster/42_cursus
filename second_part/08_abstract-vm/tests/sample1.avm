@@ -1,0 +1,11 @@
+push int8(32)
+push int16(1000)
+add ;ceci est un comment
+push float(67.55)
+mul
+push double(41111.254);ici un double
+push int32(2)
+dump
+pop
+assert double(41111.254)
+exit

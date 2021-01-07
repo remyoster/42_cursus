@@ -1,0 +1,5 @@
+push int86(34)
+push floatt(34.21)
+push
+push()
+exit

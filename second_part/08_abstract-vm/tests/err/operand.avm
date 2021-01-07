@@ -1,0 +1,5 @@
+push floatt(32.14)
+assert int8(45)
+push double(7)
+push int8787(8749)
+exit

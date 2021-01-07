@@ -1,0 +1,29 @@
+dump
+;ceci est un test
+;exit
+push int32(12000)
+dump
+push int8(112)
+print
+add
+push float(0.00123456789)
+mul
+push double(42.8784816165784646844)
+push int32(12000)
+dump
+push int8(112)
+print
+add
+push float(0.00123456789)
+mul
+div
+push int16(5784)
+mod
+dump
+pop
+;table rase
+push int32(42)
+push int16(1)
+mod
+dump
+exit

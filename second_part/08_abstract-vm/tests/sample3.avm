@@ -1,0 +1,10 @@
+push int32(42)
+push int8(-42)
+add
+push int16(-4242)
+mul
+push float(42.42)
+div
+push double(42424242.42424242)
+dump
+exit

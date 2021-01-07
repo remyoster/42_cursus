@@ -1,0 +1,15 @@
+push int8(8);
+push double(42.424242)
+mul
+dump
+pop
+push int32(14512)
+push int16(4512)
+assert int16(4512)
+sub
+assert int32(10000)
+pop
+push int8(42)
+print
+assert int8(42)
+exit

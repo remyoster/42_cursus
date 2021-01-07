@@ -1,0 +1,9 @@
+push push int8(32)
+assert ()
+add 
+mul
+div
+mod
+dump
+print
+pop

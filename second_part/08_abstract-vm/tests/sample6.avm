@@ -1,0 +1,19 @@
+push int32(42)
+assert int32(42)
+push float(42.42)
+assert float(42.42)
+push double(42.42)
+assert double(42.42)
+
+pop
+pop
+pop
+
+;commentaire
+
+push float(0.000007869)
+assert float(0.000007869)
+push double(42.0002000000000000054894899818478646514646)
+assert double(42.0002000000000000054894899818478646514646)
+dump
+exit

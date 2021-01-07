@@ -1,0 +1,7 @@
+push int32(0)
+push double(0)
+div
+push float(0.00000000)
+push double(0)
+mod
+exit

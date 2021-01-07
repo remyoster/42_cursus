@@ -1,0 +1,6 @@
+.58 push int8(32)
+assert . float(45.25)
+push double(42.42.42)
+push float(42..42)
+assert int16(88.)
+exit
