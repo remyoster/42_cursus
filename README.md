@@ -48,7 +48,7 @@ All theese projects were designed to be compiled with clang on MacOS. For web pr
 
 ## Second part
 ### Lang :
-C, C++, Python, Javascript
+C, C++, Python, Javascript, shell
 
 ### Skills :
 Unix, Algorithms & AI, Web, Technology integration, Object-oriented programming, Functional programming, Imperative programming, Rigor, Security
@@ -72,6 +72,12 @@ _Eat/sleep/think with multithreading, mutex, semaphores and processes_
 6. **piscine_cpp:**  `100/100` 
 [_repo_](https://github.com/remyoster/42_cursus/tree/main/second_part/06_piscine_cpp)</br>
 _Many exercices to learn and practice c++ (98)_
+7. **darkly:**  `125/100` 
+[_repo_](https://github.com/remyoster/42_cursus/tree/main/second_part/07_darkly)</br>
+_Security project to find vulnerabilities in a web application_
+8. **abstract-vm:**  `119/100` 
+[_repo_](https://github.com/remyoster/42_cursus/tree/main/second_part/08_abstract-vm)</br>
+_Simple VM coded in c++ to read and execute pseudo-ASM basic instructions_
 
 ### N.B:
 C projects were designed to be compiled with gcc on MacOS and ubuntu (18.04).

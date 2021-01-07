@@ -18,6 +18,7 @@
 The stack : NodeJs(express) in the back, and React/Redux with material-ui on the front. Socket.io for exchanges. The client is pre-builted.
 `npm run install-server && npm start` to run it on your localhost:3001
 `npm run install-all && npm run test` to run tests.
+
 #### Available Scripts
 * `npm run install-server`
 Install server's dependencies
