@@ -82,3 +82,5 @@ _Simple VM coded in c++ to read and execute pseudo-ASM basic instructions_
 ### N.B:
 C projects were designed to be compiled with gcc on MacOS and ubuntu (18.04).
 C++ projects were designed to be compiled with clang++ on ubuntu (18.04)
+
+![image](https://github.com/remyoster/42_cursus/assets/42905641/5d360f98-33fd-454a-affa-848d69c8ab04)
